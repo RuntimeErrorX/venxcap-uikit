@@ -5,6 +5,9 @@ import Overlay from "../../components/Overlay/Overlay";
 import { useMatchBreakpoints } from "../../hooks";
 import Logo from "./components/Logo";
 import Panel from "./components/Panel";
+import UserBlock from "./UserBlock";
+import { Flex } from "../../components/Flex";
+// import Avatar from "./Avatar";
 import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 
@@ -59,7 +62,9 @@ const MobileOnlyOverlay = styled(Overlay)`
 `;
 
 const Menu: React.FC<NavProps> = ({
-  userMenu,
+  account,
+  login,
+  logout,
   isDark,
   toggleTheme,
   langs,
@@ -116,7 +121,11 @@ const Menu: React.FC<NavProps> = ({
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
-        {userMenu}
+        {/* {userMenu} */}
+        <Flex>
+          <UserBlock account={account} login={login} logout={logout} />
+          {/* {profile && <Avatar profile={profile} />} */}
+        </Flex>
       </StyledNav>
       <BodyWrapper>
         <Panel
