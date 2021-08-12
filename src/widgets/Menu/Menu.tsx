@@ -16,11 +16,11 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
+// transition: top 0.2s;
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
   top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
   left: 0;
-  transition: top 0.2s;
   display: flex;
   justify-content: space-between;
   align-items: center;

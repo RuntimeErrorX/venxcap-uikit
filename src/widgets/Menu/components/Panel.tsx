@@ -22,7 +22,6 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   background-color: ${({ theme }) => theme.nav.background};
   width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
   height: 100%;
-  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   border-right: ${({ isPushed }) => (isPushed ? "2px solid rgba(133, 133, 133, 0.1)" : 0)};
   z-index: 11;
   overflow: ${({ isPushed }) => (isPushed ? "initial" : "hidden")};
@@ -34,6 +33,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
     width: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
   }
 `;
+  // transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
 const Panel: React.FC<Props> = (props) => {
   const { isPushed, showMenu } = props;
