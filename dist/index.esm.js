@@ -3128,19 +3128,19 @@ var useKonamiCheatCode = function (matchedCodeHandler) {
 };
 
 var baseColors = {
-    failure: "#ED4B9E",
+    failure: "#732020",
     // primary: "#732020",
     // primaryBright: "#D94141",
     // primaryDark: "#0E232E",
     // secondary: "#71AED9",
-    success: "#31D0AA",
+    success: "#71AED9",
     warning: "#FFB237",
 };
 var additionalColors = {
     binance: "#F0B90B",
-    overlay: "#452a7a",
+    overlay: "#7a2a2a",
 };
-var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors), { primary: "#732020", primaryBright: "#D94141", primaryDark: "#0E232E", secondary: "#71AED9", background: "#F2E8DF", backgroundDisabled: "#F2E8DF", backgroundAlt: "#FFFFFF", cardBorder: "#E7E3EB", contrast: "#191326", invertedContrast: "#F2BC79", dropdown: "#F6F6F6", dropdownDeep: "#EEEEEE", input: "#eeeaf4", inputSecondary: "#d7caec", tertiary: "#EFF4F5", text: "#732020", textDisabled: "#BDC2C4", textSubtle: "#7A6EAA", disabled: "#E9EAEB", gradients: {
+var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors), { primary: "#732020", primaryBright: "#D94141", primaryDark: "#0E232E", secondary: "#71AED9", background: "#F2E8DF", backgroundDisabled: "#F2E8DF", backgroundAlt: "#FFFFFF", cardBorder: "#E7E3EB", contrast: "#261313", invertedContrast: "#F2BC79", dropdown: "#F6F6F6", dropdownDeep: "#EEEEEE", input: "#eeeaf4", inputSecondary: "#d7caec", tertiary: "#EFF4F5", text: "#732020", textDisabled: "#BDC2C4", textSubtle: "#71AED9", disabled: "#E9EAEB", gradients: {
         bubblegum: "linear-gradient(139.73deg, #E5FDFF 0%, #F3EFFF 100%)",
         inverseBubblegum: "linear-gradient(139.73deg, #F3EFFF 0%, #E5FDFF 100%)",
         cardHeader: "linear-gradient(111.68deg, #F2ECF2 0%, #E8F2F6 100%)",
@@ -3149,13 +3149,13 @@ var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors),
         violetAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { primary: "#732020", primaryBright: "#D94141", primaryDark: "#0E232E", secondary: "#71AED9", background: "#343135", backgroundDisabled: "#3c3742", backgroundAlt: "#27262c", cardBorder: "#383241", contrast: "#FFFFFF", dropdown: "#1E1D20", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#372F47", inputSecondary: "#262130", tertiary: "#353547", text: "#F4EEFF", textDisabled: "#666171", textSubtle: "#c9c4d4", disabled: "#524B63", gradients: {
-        bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
-        inverseBubblegum: "linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)",
-        cardHeader: "linear-gradient(166.77deg, #3B4155 0%, #3A3045 100%)",
-        blue: "linear-gradient(180deg, #00707F 0%, #19778C 100%)",
-        violet: "linear-gradient(180deg, #6C4999 0%, #6D4DB2 100%)",
-        violetAlt: "linear-gradient(180deg, #434575 0%, #66578D 100%)",
+var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { primary: "#D94141", primaryBright: "#71AED9", primaryDark: "#0E232E", secondary: "#F2E8DF", background: "#313235", backgroundDisabled: "#2c2626", backgroundAlt: "#2c2626", cardBorder: "#323e41", contrast: "#FFFFFF", dropdown: "#1E1D20", dropdownDeep: "#100C18", invertedContrast: "#b55555", input: "#422c2c", inputSecondary: "#302121", tertiary: "#1c1c1c", text: "#F4EEFF", textDisabled: "#716161", textSubtle: "#F2BC79", disabled: "#634b4b", gradients: {
+        bubblegum: "linear-gradient(139.73deg, #314e5c 0%, #542a2a 100%)",
+        inverseBubblegum: "linear-gradient(139.73deg, #542a2a 0%, #314e5c 100%)",
+        cardHeader: "linear-gradient(166.77deg, #2a2e3b 0%, #453030 100%)",
+        blue: "linear-gradient(210.73deg, #22292e 0%, #71AED9 100%)",
+        violet: "linear-gradient(160.73deg, #291010 0%, #732020 100%)",
+        violetAlt: "linear-gradient(180deg, #140a0a 0%, #b31414 100%)",
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     } });
 
@@ -4123,7 +4123,7 @@ var PanelFooter = function (_a) {
 };
 var templateObject_1$c, templateObject_2$5, templateObject_3$2;
 
-var StyledPanel = styled.div(templateObject_1$b || (templateObject_1$b = __makeTemplateObject(["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"])), function (_a) {
+var StyledPanel = styled.div(templateObject_1$b || (templateObject_1$b = __makeTemplateObject(["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? "80px" : 0);
 }, function (_a) {
@@ -4148,6 +4148,7 @@ var StyledPanel = styled.div(templateObject_1$b || (templateObject_1$b = __makeT
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
 });
+// transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 var Panel = function (props) {
     var isPushed = props.isPushed, showMenu = props.showMenu;
     return (React.createElement(StyledPanel, { isPushed: isPushed, showMenu: showMenu },
@@ -4372,7 +4373,8 @@ var Flex = styled.div(templateObject_1$7 || (templateObject_1$7 = __makeTemplate
 var templateObject_1$7;
 
 var Wrapper = styled.div(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
-var StyledNav = styled.nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
+// transition: top 0.2s;
+var StyledNav = styled.nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
 }, MENU_HEIGHT, function (_a) {
