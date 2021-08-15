@@ -16,10 +16,10 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-// transition: top 0.2s;
+// transition: top 0.2s;-${MENU_HEIGHT}
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
-  top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
+  top: ${({ showMenu }) => (showMenu ? 0 : `0px`)};
   left: 0;
   display: flex;
   justify-content: space-between;
