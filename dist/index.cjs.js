@@ -3615,8 +3615,8 @@ var Icon$a = function (props) {
 var Logo$2 = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
     var imgSrc = isDark ? "/images/logo/VXCTopLeftLogoWhtText.png" : "/images/logo/VXCTopLeftLogoBlkText.png";
-    return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 270 42" }, props),
-        React__default['default'].createElement("image", { width: "266", height: "40", href: imgSrc })));
+    return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 172 41" }, props),
+        React__default['default'].createElement("image", { width: "171", height: "40", href: imgSrc })));
 };
 var LogoWithText = React__default['default'].memo(Logo$2, function (prev, next) { return prev.isDark === next.isDark; });
 
