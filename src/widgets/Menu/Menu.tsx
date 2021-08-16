@@ -17,6 +17,7 @@ const Wrapper = styled.div`
 `;
 
 // transition: top 0.2s;-${MENU_HEIGHT}
+// border-bottom: solid 2px rgba(133, 133, 133, 0.1);
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
   top: ${({ showMenu }) => (showMenu ? 0 : `0px`)};
@@ -29,7 +30,6 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   width: 100%;
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.background};
-  border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
 `;
@@ -38,10 +38,10 @@ const BodyWrapper = styled.div`
   position: relative;
   display: flex;
 `;
-
+// ${MENU_HEIGHT} - belo 0px
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-grow: 1;
-  margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
+  margin-top: ${({ showMenu }) => (showMenu ? `0px` : 0)};
   transition: margin-left 0.2s
   max-width: 100%;
 
