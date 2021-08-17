@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 `;
 
 // transition: top 0.2s;-${MENU_HEIGHT}
-// border-bottom: solid 2px rgba(133, 133, 133, 0.1);
+  // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
   top: ${({ showMenu }) => (showMenu ? 0 : `0px`)};
