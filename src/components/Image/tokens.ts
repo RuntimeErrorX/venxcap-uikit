@@ -3,9 +3,9 @@
  */
 const tokens = {
   venx: {
-    symbol: "VENX",
+    symbol: "VERX",
     address: {
-      56: "",
+      56: "0xfe16ABdb706bA7Ff296838116D050D6a3A54C4F5",
       97: "0xfe16ABdb706bA7Ff296838116D050D6a3A54C4F5",
     },
     decimals: 18,
