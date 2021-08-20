@@ -2,6 +2,15 @@
  * @see https://github.com/pancakeswap/pancake-frontend/blob/develop/src/config/constants/tokens.ts
  */
 const tokens = {
+  venx: {
+    symbol: "VENX",
+    address: {
+      56: "",
+      97: "0xfe16ABdb706bA7Ff296838116D050D6a3A54C4F5",
+    },
+    decimals: 18,
+    projectLink: "https://venetianx.capital/",
+  },
   cake: {
     symbol: "CAKE",
     address: {
