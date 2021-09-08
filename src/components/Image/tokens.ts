@@ -2,14 +2,32 @@
  * @see https://github.com/pancakeswap/pancake-frontend/blob/develop/src/config/constants/tokens.ts
  */
 const tokens = {
-  venx: {
-    symbol: "VERX",
+  vxc: {
+    symbol: 'vXc',
     address: {
-      56: "0xfe16ABdb706bA7Ff296838116D050D6a3A54C4F5",
-      97: "0xfe16ABdb706bA7Ff296838116D050D6a3A54C4F5",
+      56: '0xdA94C8c31e2B0426CEf30E42964cE4d3aa9B06d3',
+      97: '0xdA94C8c31e2B0426CEf30E42964cE4d3aa9B06d3',
     },
     decimals: 18,
-    projectLink: "https://venetianx.capital/",
+    projectLink: 'https://venetianxswap.capital/',
+  },
+  vchip: {
+    symbol: 'vChP',
+    address: {
+      56: '0x70eBEfC51cea896b1742DB245a31D96098b5B8E3',
+      97: '0x70eBEfC51cea896b1742DB245a31D96098b5B8E3',
+    },
+    decimals: 18,
+    projectLink: 'https://venetianxswap.capital/',
+  },
+  bank: {
+    symbol: 'bAnK',
+    address: {
+      56: '0xca7F55bC7cD3ee83e69d3F366062D68617115F3c',
+      97: '0xca7F55bC7cD3ee83e69d3F366062D68617115F3c',
+    },
+    decimals: 18,
+    projectLink: 'https://venetianxswap.capital/',
   },
   cake: {
     symbol: "CAKE",

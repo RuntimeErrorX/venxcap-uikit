@@ -838,6 +838,14 @@ var Icon$X = function (props) {
                 React__default['default'].createElement("stop", { offset: "1", stopColor: "#8D4104" })))));
 };
 
+var VenetianXRound = function (_a) {
+    var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
+    var imgSrc = isDark ? "/images/logo/VenXCapLogoRound.png" : "/images/logo/VenXCapLogoRoundLight.png";
+    return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 92 92" }, props),
+        React__default['default'].createElement("image", { width: "90", height: "90", href: imgSrc })));
+};
+var VenetianXRound$1 = React__default['default'].memo(VenetianXRound, function (prev, next) { return prev.isDark === next.isDark; });
+
 var Icon$W = function (props) {
     var id = uniqueId__default['default']("svg");
     return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 48 48" }, props),
@@ -3778,39 +3786,39 @@ var links = [
         icon: "PoolIcon",
         href: "/syrup",
     },
-    {
-        label: "Lottery",
-        icon: "TicketIcon",
-        href: "/lottery",
-    },
-    {
-        label: "NFT",
-        icon: "NftIcon",
-        href: "/nft",
-    },
-    {
-        label: "Team Battle",
-        icon: "TeamBattleIcon",
-        href: "/competition",
-        status: status.SOON,
-    },
-    {
-        label: "Profile & Teams",
-        icon: "GroupsIcon",
-        status: status.LIVE,
-        items: [
-            {
-                label: "Leaderboard",
-                href: "/teams",
-                status: status.NEW,
-            },
-            {
-                label: "YourProfile",
-                href: "/",
-            },
-        ],
-        calloutClass: "rainbow",
-    },
+    // {
+    //   label: "Lottery",
+    //   icon: "TicketIcon",
+    //   href: "/lottery",
+    // },
+    // {
+    //   label: "NFT",
+    //   icon: "NftIcon",
+    //   href: "/nft",
+    // },
+    // {
+    //   label: "Team Battle",
+    //   icon: "TeamBattleIcon",
+    //   href: "/competition",
+    //   status: status.SOON,
+    // },
+    // {
+    //   label: "Profile & Teams",
+    //   icon: "GroupsIcon",
+    //   status: status.LIVE,
+    //   items: [
+    //     {
+    //       label: "Leaderboard",
+    //       href: "/teams",
+    //       status: status.NEW,
+    //     },
+    //     {
+    //       label: "YourProfile",
+    //       href: "/",
+    //     },
+    //   ],
+    //   calloutClass: "rainbow",
+    // },
     {
         label: "Info",
         icon: "InfoIcon",
@@ -3833,40 +3841,48 @@ var links = [
             },
         ],
     },
+    // {
+    //   label: "IFO",
+    //   icon: "IfoIcon",
+    //   items: [
+    //     {
+    //       label: "Next",
+    //       href: "/ifo",
+    //     },
+    //     {
+    //       label: "History",
+    //       href: "/ifo/history",
+    //     },
+    //   ],
+    // },
     {
-        label: "IFO",
-        icon: "IfoIcon",
+        label: 'More',
+        icon: 'MoreIcon',
         items: [
             {
-                label: "Next",
-                href: "/ifo",
+                label: 'Contact',
+                href: 'https://docs.venetianxcapital.finance/contact-us',
+            },
+            // {
+            //   label: t('Voting'),
+            //   href: '/voting',
+            // },
+            {
+                label: 'Github',
+                href: 'https://github.com/venetianxcapital',
             },
             {
-                label: "History",
-                href: "/ifo/history",
-            },
-        ],
-    },
-    {
-        label: "More",
-        icon: "MoreIcon",
-        items: [
-            {
-                label: "Voting",
-                href: "https://voting.pancakeswap.finance",
+                label: 'Docs',
+                href: 'https://docs.venetianxcapital.finance',
             },
             {
-                label: "Github",
-                href: "https://github.com/pancakeswap",
+                label: 'Blog',
+                href: 'https://venetianxcapital.medium.com',
             },
-            {
-                label: "Docs",
-                href: "https://docs.pancakeswap.finance",
-            },
-            {
-                label: "Blog",
-                href: "https://pancakeswap.medium.com",
-            },
+            // {
+            //   label: t('Merch'),
+            //   href: 'https://pancakeswap.creator-spring.com/',
+            // },
         ],
     },
 ];
@@ -4057,9 +4073,9 @@ var templateObject_1$e;
 
 var PriceLink = styled__default['default'].a(templateObject_1$d || (templateObject_1$d = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
 var CakePrice = function (_a) {
-    var cakePriceUsd = _a.cakePriceUsd;
-    return cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", target: "_blank" },
-        React__default['default'].createElement(Icon$X, { width: "24px", mr: "8px" }),
+    var cakePriceUsd = _a.cakePriceUsd, isDark = _a.isDark;
+    return cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: "http://localhost:3000/swap?outputCurrency=0xdA94C8c31e2B0426CEf30E42964cE4d3aa9B06d3", target: "_blank" },
+        React__default['default'].createElement(VenetianXRound$1, { width: "24px", mr: "8px", isDark: isDark }),
         React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
 };
 var CakePrice$1 = React__default['default'].memo(CakePrice);
@@ -4114,7 +4130,7 @@ var PanelFooter = function (_a) {
     }
     return (React__default['default'].createElement(Container, null,
         React__default['default'].createElement(SocialEntry, null,
-            React__default['default'].createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd }),
+            React__default['default'].createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd, isDark: isDark }),
             React__default['default'].createElement(SocialLinks$1, null)),
         React__default['default'].createElement(SettingsEntry, null,
             React__default['default'].createElement(ThemeSwitcher$1, { isDark: isDark, toggleTheme: toggleTheme }),
@@ -4845,6 +4861,7 @@ exports.TuneIcon = Icon$t;
 exports.UserMenu = UserMenu;
 exports.UserMenuDivider = UserMenuDivider;
 exports.UserMenuItem = UserMenuItem;
+exports.VenetianXRound = VenetianXRound$1;
 exports.VerifiedIcon = Icon$Q;
 exports.VisibilityOff = Icon$s;
 exports.VisibilityOn = Icon$r;

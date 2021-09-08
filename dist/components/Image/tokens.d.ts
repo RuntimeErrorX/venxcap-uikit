@@ -2,7 +2,25 @@
  * @see https://github.com/pancakeswap/pancake-frontend/blob/develop/src/config/constants/tokens.ts
  */
 declare const tokens: {
-    venx: {
+    vxc: {
+        symbol: string;
+        address: {
+            56: string;
+            97: string;
+        };
+        decimals: number;
+        projectLink: string;
+    };
+    vchip: {
+        symbol: string;
+        address: {
+            56: string;
+            97: string;
+        };
+        decimals: number;
+        projectLink: string;
+    };
+    bank: {
         symbol: string;
         address: {
             56: string;

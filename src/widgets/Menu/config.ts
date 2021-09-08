@@ -46,39 +46,39 @@ export const links = [
     icon: "PoolIcon",
     href: "/syrup",
   },
-  {
-    label: "Lottery",
-    icon: "TicketIcon",
-    href: "/lottery",
-  },
-  {
-    label: "NFT",
-    icon: "NftIcon",
-    href: "/nft",
-  },
-  {
-    label: "Team Battle",
-    icon: "TeamBattleIcon",
-    href: "/competition",
-    status: status.SOON,
-  },
-  {
-    label: "Profile & Teams",
-    icon: "GroupsIcon",
-    status: status.LIVE,
-    items: [
-      {
-        label: "Leaderboard",
-        href: "/teams",
-        status: status.NEW,
-      },
-      {
-        label: "YourProfile",
-        href: "/",
-      },
-    ],
-    calloutClass: "rainbow",
-  },
+  // {
+  //   label: "Lottery",
+  //   icon: "TicketIcon",
+  //   href: "/lottery",
+  // },
+  // {
+  //   label: "NFT",
+  //   icon: "NftIcon",
+  //   href: "/nft",
+  // },
+  // {
+  //   label: "Team Battle",
+  //   icon: "TeamBattleIcon",
+  //   href: "/competition",
+  //   status: status.SOON,
+  // },
+  // {
+  //   label: "Profile & Teams",
+  //   icon: "GroupsIcon",
+  //   status: status.LIVE,
+  //   items: [
+  //     {
+  //       label: "Leaderboard",
+  //       href: "/teams",
+  //       status: status.NEW,
+  //     },
+  //     {
+  //       label: "YourProfile",
+  //       href: "/",
+  //     },
+  //   ],
+  //   calloutClass: "rainbow",
+  // },
   {
     label: "Info",
     icon: "InfoIcon",
@@ -101,40 +101,48 @@ export const links = [
       },
     ],
   },
+  // {
+  //   label: "IFO",
+  //   icon: "IfoIcon",
+  //   items: [
+  //     {
+  //       label: "Next",
+  //       href: "/ifo",
+  //     },
+  //     {
+  //       label: "History",
+  //       href: "/ifo/history",
+  //     },
+  //   ],
+  // },
   {
-    label: "IFO",
-    icon: "IfoIcon",
+    label: 'More',
+    icon: 'MoreIcon',
     items: [
       {
-        label: "Next",
-        href: "/ifo",
+        label: 'Contact',
+        href: 'https://docs.venetianxcapital.finance/contact-us',
+      },
+      // {
+      //   label: t('Voting'),
+      //   href: '/voting',
+      // },
+      {
+        label: 'Github',
+        href: 'https://github.com/venetianxcapital',
       },
       {
-        label: "History",
-        href: "/ifo/history",
-      },
-    ],
-  },
-  {
-    label: "More",
-    icon: "MoreIcon",
-    items: [
-      {
-        label: "Voting",
-        href: "https://voting.pancakeswap.finance",
+        label: 'Docs',
+        href: 'https://docs.venetianxcapital.finance',
       },
       {
-        label: "Github",
-        href: "https://github.com/pancakeswap",
+        label: 'Blog',
+        href: 'https://venetianxcapital.medium.com',
       },
-      {
-        label: "Docs",
-        href: "https://docs.pancakeswap.finance",
-      },
-      {
-        label: "Blog",
-        href: "https://pancakeswap.medium.com",
-      },
+      // {
+      //   label: t('Merch'),
+      //   href: 'https://pancakeswap.creator-spring.com/',
+      // },
     ],
   },
 ];
