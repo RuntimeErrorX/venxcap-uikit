@@ -2282,14 +2282,14 @@ var VenetianXIcon = function (props) {
 };
 
 var rotate = styled.keyframes(templateObject_1$s || (templateObject_1$s = __makeTemplateObject(["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"], ["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"])));
-var float = styled.keyframes(templateObject_2$e || (templateObject_2$e = __makeTemplateObject(["\n\t0% {\n\t\ttransform: translatey(0px);\n\t\ttransform: translatex(0px);\n\t}\n\t50% {\n\t\ttransform: translatex(15px);\n\t}\n\t100% {\n\t\ttransform: translatey(0px);\n\t\ttransform: translatex(0px);\n\t}\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"], ["\n\t0% {\n\t\ttransform: translatey(0px);\n\t\ttransform: translatex(0px);\n\t}\n\t50% {\n\t\ttransform: translatex(15px);\n\t}\n\t100% {\n\t\ttransform: translatey(0px);\n\t\ttransform: translatex(0px);\n\t}\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"])));
+var float = styled.keyframes(templateObject_2$e || (templateObject_2$e = __makeTemplateObject(["\n\t0% {\n\t\ttransform: translatey(0px);\n\t\ttransform: translatex(0px);\n\t}\n\t50% {\n\t\ttransform: translatex(35px);\n\t}\n\t100% {\n\t\ttransform: translatey(0px);\n\t\ttransform: translatex(0px);\n\t}\n"], ["\n\t0% {\n\t\ttransform: translatey(0px);\n\t\ttransform: translatex(0px);\n\t}\n\t50% {\n\t\ttransform: translatex(35px);\n\t}\n\t100% {\n\t\ttransform: translatey(0px);\n\t\ttransform: translatex(0px);\n\t}\n"])));
 var Container$3 = styled__default['default'].div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  position: relative;\n"], ["\n  position: relative;\n"])));
 styled__default['default'](VenetianXIcon)(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: absolute;\n  top: 0;\n  left: 0;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate);
-var FloatingCoinIcon = styled__default['default'](VenetianXIcon)(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  animation: ", " 6s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  animation: ", " 6s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"])), float);
+var FloatingCoinIcon = styled__default['default'](VenetianXIcon)(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  animation: ", " 6s ease-in-out infinite;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  animation: ", " 6s ease-in-out infinite;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"])), float, rotate);
 var Spinner = function (_a) {
     _a.size;
     return (React__default['default'].createElement(Container$3, null,
-        React__default['default'].createElement(FloatingCoinIcon, { width: "180px" })));
+        React__default['default'].createElement(FloatingCoinIcon, { width: "280px" })));
 };
 var templateObject_1$s, templateObject_2$e, templateObject_3$7, templateObject_4$4, templateObject_5$2;
 
