@@ -19,7 +19,8 @@ const float = keyframes`
 		transform: translatex(0px);
 	}
 	50% {
-		transform: translatex(35px);
+		transform: translatey(0px);
+		transform: translatex(20px);
 	}
 	100% {
 		transform: translatey(0px);
@@ -40,8 +41,8 @@ const VenetianXIcons = styled(VenetianXIcon)`
 `;
 
 const FloatingCoinIcon = styled(VenetianXIcon)`
-  animation: ${float} 6s ease-in-out infinite;
-  animation: ${rotate} 2s linear infinite;
+  animation: ${float} 4s ease-in-out infinite;
+  animation: ${rotate} 2.5s linear infinite;
   transform: translate3d(0, 0, 0);
 `;
 
