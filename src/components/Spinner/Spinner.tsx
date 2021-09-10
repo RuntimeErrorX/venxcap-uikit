@@ -19,10 +19,10 @@ const float = keyframes`
 		transform: translatex(0px);
 	}
 	50% {
-		transform: translatey(0px);
-		transform: translatex(20px);
+    transform: scale(1) translate(-2px, -2px);
 	}
 	100% {
+    transform: scale(0) translate(-2px, -2px);
 		transform: translatey(0px);
 		transform: translatex(0px);
 	}
@@ -34,23 +34,21 @@ const Container = styled.div`
 
 const VenetianXIcons = styled(VenetianXIcon)`
   position: absolute;
-  top: 0;
-  left: 0;
+  margin: 0px auto;
   animation: ${rotate} 2s linear infinite;
   transform: translate3d(0, 0, 0);
 `;
 
-const FloatingCoinIcon = styled(VenetianXIcon)`
-  animation: ${float} 4s ease-in-out infinite;
-  animation: ${rotate} 2.5s linear infinite;
+const FloatingCoinIcon = styled(PanIcon)`
+  animation: ${rotate} 2s linear infinite;
   transform: translate3d(0, 0, 0);
 `;
 
 const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
   return (
     <Container>
-      {/* <VenetianXIcons width={`${size * 0.5}px`} /> */}
-      <FloatingCoinIcon width={`280px`} />
+      <VenetianXIcons width={`195px`} />
+      {/* <FloatingCoinIcon width={`200px`} /> */}
     </Container>
   );
 };
