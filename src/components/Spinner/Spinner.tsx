@@ -32,14 +32,14 @@ const float2 = keyframes`
 const float = keyframes`
 	0% {
 		transform: translatey(0px);
-		transform: translatex(40%);
+		transform: translatex(0px);
 	}
 	50% {
-		transform: translatex(-40%);
+		transform: translatex(-45%);
 	}
 	100% {
 		transform: translatey(0px);
-		transform: translatex(0px);
+		transform: translatex(45%);
 	}
 `;
 
@@ -75,7 +75,7 @@ const FloatingCoinIcon = styled(VenetianXIcon)`
   top: 1%;
   left: 1%;
   animation: ${rotate} 2s linear infinite;
-  animation: ${float} 6.5s ease-in-out infinite;
+  animation: ${float} 6.75s ease-in-out infinite;
   transform: translate3d(0, 0, 0);
 `;
 const FloatingCoinIcon1 = styled(VChipIcon)`
