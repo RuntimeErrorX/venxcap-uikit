@@ -72,8 +72,9 @@ const VenetianXIcons = styled(VenetianXIcon)`
 
 const FloatingCoinIcon = styled(VenetianXIcon)`
   z-index: 1;
+  margin-top: 3px;
   animation: ${rotate} 5.3s linear infinite;
-  transform: translate3d(50, 50, 20);
+  transform: translate3d(0, 0, 0);
 `;
 const FloatingCoinIcon1 = styled(VChipIcon)`
   z-index: 2;
