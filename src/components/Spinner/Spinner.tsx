@@ -32,14 +32,14 @@ const float1 = keyframes`
 const float = keyframes`
 	0% {
 		transform: translatex(0px);
-		transform: translatey(25px);
+		transform: translatey(-40px);
 	}
 	50% {
 		transform: translatex(0px);
 	}
 	100% {
 		transform: translatex(0px);
-		transform: translatey(25px);
+		transform: translatey(-40px);
 	}
 `;
 
