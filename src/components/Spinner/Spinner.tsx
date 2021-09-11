@@ -72,9 +72,7 @@ const VenetianXIcons = styled(VenetianXIcon)`
 
 const FloatingCoinIcon = styled(VenetianXIcon)`
   z-index: 1;
-  top: 1%;
-  left: 1%;
-  animation: ${rotate} 2s linear infinite;
+  animation: ${rotate} 5s linear infinite;
   transform: translate3d(0, 0, 0);
 `;
 const FloatingCoinIcon1 = styled(VChipIcon)`
@@ -82,7 +80,7 @@ const FloatingCoinIcon1 = styled(VChipIcon)`
   top: 1%;
   left: 1%;
   animation: ${rotate} 2s linear infinite;
-  animation: ${float1} 5.5s ease-in-out infinite;
+  animation: ${float1} 5s ease-in-out infinite;
   transform: translate3d(0, 0, 0);
 `;
 const FloatingCoinIcon2 = styled(BankIcon)`
@@ -90,7 +88,7 @@ const FloatingCoinIcon2 = styled(BankIcon)`
   top: 1%;
   left: 1%;
   animation: ${rotate} 2s linear infinite;
-  animation: ${float2} 5.5s ease-in-out infinite;
+  animation: ${float2} 5s ease-in-out infinite;
   transform: translate3d(0, 0, 0);
 `;
 
