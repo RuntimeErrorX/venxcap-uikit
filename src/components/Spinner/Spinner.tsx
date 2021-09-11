@@ -1,8 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import VChipIcon from "./VChipXIcon";
+import PanIcon from "./PanIcon";
 import VenetianXIcon from "./VenetianXIcon";
-import BankIcon from "./BankIcon";
 import { SpinnerProps } from "./types";
 
 const rotate = keyframes`
@@ -20,7 +19,7 @@ const float = keyframes`
 		transform: translatex(0px);
 	}
 	50% {
-		transform: translatex(25px);
+		transform: translatex(35px);
 	}
 	100% {
 		transform: translatey(0px);
@@ -37,28 +36,7 @@ const VenetianXIcons = styled(VenetianXIcon)`
   padding-top: 1%;
   margin: auto 0px;
   text-align:center;
-  animation: ${float} 6s ease-in-out infinite;
-  animation: ${rotate} 2.5s linear infinite;
-  transform: translate3d(0, 0, 0);
-`;
-
-const VChipIcons = styled(VChipIcon)`
-  position: absolute;
-  padding-top: 1%;
-  margin: auto 0px;
-  text-align:center;
-  animation: ${float} 6s ease-in-out infinite;
-  animation: ${rotate} 3.25s linear infinite;
-  transform: translate3d(0, 0, 0);
-`;
-
-const BankIcons = styled(BankIcon)`
-  position: absolute;
-  padding-top: 1%;
-  margin: auto 0px;
-  text-align:center;
-  animation: ${float} 6s ease-in-out infinite;
-  animation: ${rotate} 4s linear infinite;
+  animation: ${rotate} 2s linear infinite;
   transform: translate3d(0, 0, 0);
 `;
 
@@ -70,9 +48,7 @@ const FloatingCoinIcon = styled(VenetianXIcon)`
 const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
   return (
     <Container>
-      <BankIcons width={`190px`} />
-      <VChipIcons width={'190px'} />
-      <VenetianXIcons width={`190px`} />
+      <VenetianXIcons width={`175px`} />
       {/* <FloatingCoinIcon width={`210px`} /> */}
     </Container>
   );
