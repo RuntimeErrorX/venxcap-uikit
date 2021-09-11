@@ -18,42 +18,42 @@ const rotate = keyframes`
 const float1 = keyframes`
 	0% {
 		transform: translatey(0px);
-		transform: translatex(-70%);
+		transform: translatex(-75%);
 	}
 	50% {
 		transform: translatex(0px);
 	}
 	100% {
 		transform: translatey(0px);
-		transform: translatex(-70%);
+		transform: translatex(-75%);
 	}
 `;
 
 const float = keyframes`
 	0% {
-		transform: translatey(0px);
-		transform: translatex(15px);
+		transform: translatex(0px);
+		transform: translatey(25px);
 	}
 	50% {
 		transform: translatex(0px);
 	}
 	100% {
-		transform: translatey(0px);
-		transform: translatex(15px);
+		transform: translatex(0px);
+		transform: translatey(25px);
 	}
 `;
 
 const float2 = keyframes`
 	0% {
 		transform: translatey(0px);
-		transform: translatex(70%);
+		transform: translatex(75%);
 	}
 	50% {
 		transform: translatex(0px);
 	}
 	100% {
 		transform: translatey(0px);
-		transform: translatex(70%);
+		transform: translatex(75%);
 	}
 `;
 
