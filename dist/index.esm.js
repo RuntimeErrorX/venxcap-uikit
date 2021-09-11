@@ -2186,18 +2186,18 @@ var BunnyButt = styled.div(templateObject_3$9 || (templateObject_3$9 = __makeTem
 });
 var BunnySlider = styled.div(templateObject_4$6 || (templateObject_4$6 = __makeTemplateObject(["\n  position: absolute;\n  left: 14px;\n  width: calc(100% - 14px);\n"], ["\n  position: absolute;\n  left: 14px;\n  width: calc(100% - 14px);\n"])));
 var StyledInput = styled.input(templateObject_5$4 || (templateObject_5$4 = __makeTemplateObject(["\n  cursor: ", ";\n  height: 32px;\n  position: relative;\n\n  ::-webkit-slider-thumb {\n    ", "\n  }\n\n  ::-moz-range-thumb {\n    ", "\n  }\n\n  ::-ms-thumb {\n    ", "\n  }\n"], ["\n  cursor: ", ";\n  height: 32px;\n  position: relative;\n\n  ::-webkit-slider-thumb {\n    ", "\n  }\n\n  ::-moz-range-thumb {\n    ", "\n  }\n\n  ::-ms-thumb {\n    ", "\n  }\n"])), getCursorStyle, getBaseThumbStyles, getBaseThumbStyles, getBaseThumbStyles);
-var BarBackground = styled.div(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"], ["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"])), function (_a) {
+var BarBackground = styled.div(templateObject_6$2 || (templateObject_6$2 = __makeTemplateObject(["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"], ["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"])), function (_a) {
     var theme = _a.theme, disabled = _a.disabled;
     return theme.colors[disabled ? "textDisabled" : "inputSecondary"];
 });
-var BarProgress = styled.div(templateObject_7$1 || (templateObject_7$1 = __makeTemplateObject(["\n  background-color: ", ";\n  filter: ", ";\n  height: 10px;\n  position: absolute;\n  top: 18px;\n"], ["\n  background-color: ", ";\n  filter: ", ";\n  height: 10px;\n  position: absolute;\n  top: 18px;\n"])), function (_a) {
+var BarProgress = styled.div(templateObject_7$2 || (templateObject_7$2 = __makeTemplateObject(["\n  background-color: ", ";\n  filter: ", ";\n  height: 10px;\n  position: absolute;\n  top: 18px;\n"], ["\n  background-color: ", ";\n  filter: ", ";\n  height: 10px;\n  position: absolute;\n  top: 18px;\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.primary;
 }, function (_a) {
     var disabled = _a.disabled;
     return (disabled ? "grayscale(100%)" : "none");
 });
-var templateObject_1$u, templateObject_2$g, templateObject_3$9, templateObject_4$6, templateObject_5$4, templateObject_6$1, templateObject_7$1;
+var templateObject_1$u, templateObject_2$g, templateObject_3$9, templateObject_4$6, templateObject_5$4, templateObject_6$2, templateObject_7$2;
 
 var Slider = function (_a) {
     var name = _a.name, min = _a.min, max = _a.max, value = _a.value, onValueChanged = _a.onValueChanged, valueLabel = _a.valueLabel, _b = _a.step, step = _b === void 0 ? "any" : _b, _c = _a.disabled, disabled = _c === void 0 ? false : _c, props = __rest(_a, ["name", "min", "max", "value", "onValueChanged", "valueLabel", "step", "disabled"]);
@@ -2267,17 +2267,33 @@ var VenetianXIcon = function (props) {
         React.createElement("image", { width: "190", height: "190", href: imgSrc })));
 };
 
+var VChipIcon = function (props) {
+    var imgSrc = "/images/logo/loading1.png"; // : "/images/logo/VenXCapLogoRoundLight.png";
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 200 200" }, props),
+        React.createElement("image", { width: "190", height: "190", href: imgSrc })));
+};
+
+var BankIcon = function (props) {
+    var imgSrc = "/images/logo/loading2.png"; // : "/images/logo/VenXCapLogoRoundLight.png";
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 200 200" }, props),
+        React.createElement("image", { width: "190", height: "190", href: imgSrc })));
+};
+
 var rotate = keyframes(templateObject_1$s || (templateObject_1$s = __makeTemplateObject(["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"], ["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"])));
 var float = keyframes(templateObject_2$e || (templateObject_2$e = __makeTemplateObject(["\n\t0% {\n\t\ttransform: translatey(0px);\n\t\ttransform: translatex(0px);\n\t}\n\t50% {\n\t\ttransform: translatex(35px);\n\t}\n\t100% {\n\t\ttransform: translatey(0px);\n\t\ttransform: translatex(0px);\n\t}\n"], ["\n\t0% {\n\t\ttransform: translatey(0px);\n\t\ttransform: translatex(0px);\n\t}\n\t50% {\n\t\ttransform: translatex(35px);\n\t}\n\t100% {\n\t\ttransform: translatey(0px);\n\t\ttransform: translatex(0px);\n\t}\n"])));
 var Container$3 = styled.div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  position: relative;\n"], ["\n  position: relative;\n"])));
 styled(VenetianXIcon)(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  position: absolute;\n  padding-top: 1%;\n  margin: auto 0px;\n  text-align:center;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: absolute;\n  padding-top: 1%;\n  margin: auto 0px;\n  text-align:center;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate);
 var FloatingCoinIcon = styled(VenetianXIcon)(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  animation: ", " 2s linear infinite;\n  animation: ", " 6s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  animation: ", " 2s linear infinite;\n  animation: ", " 6s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate, float);
+var FloatingCoinIcon1 = styled(VChipIcon)(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  animation: ", " 2s linear infinite;\n  animation: ", " 5.25s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  animation: ", " 2s linear infinite;\n  animation: ", " 5.25s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate, float);
+var FloatingCoinIcon2 = styled(BankIcon)(templateObject_7$1 || (templateObject_7$1 = __makeTemplateObject(["\n  animation: ", " 2s linear infinite;\n  animation: ", " 4.75s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  animation: ", " 2s linear infinite;\n  animation: ", " 4.75s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate, float);
 var Spinner = function (_a) {
     _a.size;
     return (React.createElement(Container$3, null,
+        React.createElement(FloatingCoinIcon2, { width: "190px" }),
+        React.createElement(FloatingCoinIcon1, { width: "190px" }),
         React.createElement(FloatingCoinIcon, { width: "190px" })));
 };
-var templateObject_1$s, templateObject_2$e, templateObject_3$7, templateObject_4$4, templateObject_5$2;
+var templateObject_1$s, templateObject_2$e, templateObject_3$7, templateObject_4$4, templateObject_5$2, templateObject_6$1, templateObject_7$1;
 
 var StepperWrapper = styled.div(templateObject_1$r || (templateObject_1$r = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  width: fit-content;\n"], ["\n  display: flex;\n  flex-direction: column;\n  width: fit-content;\n"])));
 var Stepper = function (_a) {
