@@ -70,9 +70,9 @@ const FloatingCoinIcon = styled(VenetianXIcon)`
 const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
   return (
     <Container>
-      <BankIcons width={`175px`} />
-      <VChipIcons width={'175px'} />
-      <VenetianXIcons width={`175px`} />
+      <BankIcons width={`190px`} />
+      <VChipIcons width={'190px'} />
+      <VenetianXIcons width={`190px`} />
       {/* <FloatingCoinIcon width={`210px`} /> */}
     </Container>
   );

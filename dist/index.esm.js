@@ -2263,19 +2263,19 @@ var templateObject_1$t, templateObject_2$f, templateObject_3$8, templateObject_4
 
 var VChipIcon = function (props) {
     var imgSrc = "/images/logo/loading1.png"; // : "/images/logo/VenXCapLogoRoundLight.png";
-    return (React.createElement(Svg, __assign({ viewBox: "0 0 195 195" }, props),
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 200 200" }, props),
         React.createElement("image", { width: "190", height: "190", href: imgSrc })));
 };
 
 var VenetianXIcon = function (props) {
     var imgSrc = "/images/logo/loading.png"; // : "/images/logo/VenXCapLogoRoundLight.png";
-    return (React.createElement(Svg, __assign({ viewBox: "0 0 195 195" }, props),
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 200 200" }, props),
         React.createElement("image", { width: "190", height: "190", href: imgSrc })));
 };
 
 var BankIcon = function (props) {
     var imgSrc = "/images/logo/loading2.png"; // : "/images/logo/VenXCapLogoRoundLight.png";
-    return (React.createElement(Svg, __assign({ viewBox: "0 0 195 195" }, props),
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 200 200" }, props),
         React.createElement("image", { width: "190", height: "190", href: imgSrc })));
 };
 
@@ -2289,9 +2289,9 @@ styled(VenetianXIcon)(templateObject_7$1 || (templateObject_7$1 = __makeTemplate
 var Spinner = function (_a) {
     _a.size;
     return (React.createElement(Container$3, null,
-        React.createElement(BankIcons, { width: "175px" }),
-        React.createElement(VChipIcons, { width: '175px' }),
-        React.createElement(VenetianXIcons, { width: "175px" })));
+        React.createElement(BankIcons, { width: "190px" }),
+        React.createElement(VChipIcons, { width: '190px' }),
+        React.createElement(VenetianXIcons, { width: "190px" })));
 };
 var templateObject_1$s, templateObject_2$e, templateObject_3$7, templateObject_4$4, templateObject_5$2, templateObject_6$1, templateObject_7$1;
 
