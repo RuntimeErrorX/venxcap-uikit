@@ -18,42 +18,42 @@ const rotate = keyframes`
 const float2 = keyframes`
 	0% {
 		transform: translatey(0px);
-		transform: translatex(-50%);
+		transform: translatex(-80%);
 	}
 	50% {
 		transform: translatex(0px);
 	}
 	100% {
 		transform: translatey(0px);
-		transform: translatex(-50%);
+		transform: translatex(-80%);
 	}
 `;
 
 const float = keyframes`
 	0% {
 		transform: translatey(0px);
-		transform: translatex(0px);
+		transform: translatex(-40%);
 	}
 	50% {
 		transform: translatex(40%);
 	}
 	100% {
 		transform: translatey(0px);
-		transform: translatex(-40%);
+		transform: translatex(0px);
 	}
 `;
 
 const float1 = keyframes`
 	0% {
 		transform: translatey(0px);
-		transform: translatex(70%);
+		transform: translatex(80%);
 	}
 	50% {
 		transform: translatex(0px);
 	}
 	100% {
 		transform: translatey(0px);
-		transform: translatex(70%);
+		transform: translatex(80%);
 	}
 `;
 
@@ -100,8 +100,8 @@ const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
     <Container>
       {/* <VenetianXIcons width={`175px`} /> */}
       <FloatingCoinIcon1 width={`190px`} />
-      <FloatingCoinIcon width={`190px`} />
       <FloatingCoinIcon2 width={`190px`} />
+      <FloatingCoinIcon width={`190px`} />
     </Container>
   );
 };
