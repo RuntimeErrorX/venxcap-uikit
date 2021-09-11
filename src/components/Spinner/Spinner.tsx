@@ -87,7 +87,7 @@ const FloatingCoinIcon1 = styled(VChipIcon)`
   transform: translate3d(0, 0, 0);
 `;
 const FloatingCoinIcon2 = styled(BankIcon)`
-  z-index: 3;
+  z-index: -1;
   top: 1%;
   left: 1%;
   animation: ${rotate} 2s linear infinite;
@@ -100,8 +100,8 @@ const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
     <Container>
       {/* <VenetianXIcons width={`175px`} /> */}
       <FloatingCoinIcon1 width={`190px`} />
-      <FloatingCoinIcon2 width={`190px`} />
       <FloatingCoinIcon width={`190px`} />
+      <FloatingCoinIcon2 width={`190px`} />
     </Container>
   );
 };

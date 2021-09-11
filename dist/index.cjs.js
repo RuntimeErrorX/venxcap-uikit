@@ -2301,13 +2301,13 @@ var Container$3 = styled__default['default'].div(templateObject_5$2 || (template
 styled__default['default'](VenetianXIcon)(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  position: absolute;\n  padding-top: 1%;\n  margin: auto 0px;\n  text-align:center;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: absolute;\n  padding-top: 1%;\n  margin: auto 0px;\n  text-align:center;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate);
 var FloatingCoinIcon = styled__default['default'](VenetianXIcon)(templateObject_7$1 || (templateObject_7$1 = __makeTemplateObject(["\n  z-index: 1;\n  top: 1%;\n  left: 1%;\n  animation: ", " 2s linear infinite;\n  animation: ", " 6.5s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  z-index: 1;\n  top: 1%;\n  left: 1%;\n  animation: ", " 2s linear infinite;\n  animation: ", " 6.5s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate, float);
 var FloatingCoinIcon1 = styled__default['default'](VChipIcon)(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  z-index: 2;\n  top: 1%;\n  left: 1%;\n  animation: ", " 2s linear infinite;\n  animation: ", " 5.5s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  z-index: 2;\n  top: 1%;\n  left: 1%;\n  animation: ", " 2s linear infinite;\n  animation: ", " 5.5s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate, float1);
-var FloatingCoinIcon2 = styled__default['default'](BankIcon)(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  z-index: 3;\n  top: 1%;\n  left: 1%;\n  animation: ", " 2s linear infinite;\n  animation: ", " 5.5s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  z-index: 3;\n  top: 1%;\n  left: 1%;\n  animation: ", " 2s linear infinite;\n  animation: ", " 5.5s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate, float2);
+var FloatingCoinIcon2 = styled__default['default'](BankIcon)(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  z-index: -1;\n  top: 1%;\n  left: 1%;\n  animation: ", " 2s linear infinite;\n  animation: ", " 5.5s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  z-index: -1;\n  top: 1%;\n  left: 1%;\n  animation: ", " 2s linear infinite;\n  animation: ", " 5.5s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate, float2);
 var Spinner = function (_a) {
     _a.size;
     return (React__default['default'].createElement(Container$3, null,
         React__default['default'].createElement(FloatingCoinIcon1, { width: "190px" }),
-        React__default['default'].createElement(FloatingCoinIcon2, { width: "190px" }),
-        React__default['default'].createElement(FloatingCoinIcon, { width: "190px" })));
+        React__default['default'].createElement(FloatingCoinIcon, { width: "190px" }),
+        React__default['default'].createElement(FloatingCoinIcon2, { width: "190px" })));
 };
 var templateObject_1$s, templateObject_2$e, templateObject_3$7, templateObject_4$4, templateObject_5$2, templateObject_6$1, templateObject_7$1, templateObject_8, templateObject_9;
 
