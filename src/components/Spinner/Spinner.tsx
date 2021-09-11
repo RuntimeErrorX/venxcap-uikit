@@ -15,17 +15,17 @@ const rotate = keyframes`
   }
 `;
 
-const float2 = keyframes`
+const float1 = keyframes`
 	0% {
 		transform: translatey(0px);
-		transform: translatex(-60%);
+		transform: translatex(-70%);
 	}
 	50% {
 		transform: translatex(0px);
 	}
 	100% {
 		transform: translatey(0px);
-		transform: translatex(-60%);
+		transform: translatex(-70%);
 	}
 `;
 
@@ -43,7 +43,7 @@ const float = keyframes`
 	}
 `;
 
-const float1 = keyframes`
+const float2 = keyframes`
 	0% {
 		transform: translatey(0px);
 		transform: translatex(70%);
@@ -75,7 +75,6 @@ const FloatingCoinIcon = styled(VenetianXIcon)`
   top: 1%;
   left: 1%;
   animation: ${rotate} 2s linear infinite;
-  animation: ${float} 6.75s ease-in-out infinite;
   transform: translate3d(0, 0, 0);
 `;
 const FloatingCoinIcon1 = styled(VChipIcon)`
@@ -99,9 +98,9 @@ const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
   return (
     <Container>
       {/* <VenetianXIcons width={`175px`} /> */}
-      <FloatingCoinIcon1 width={`190px`} />
-      <FloatingCoinIcon width={`190px`} />
       <FloatingCoinIcon2 width={`190px`} />
+      <FloatingCoinIcon width={`190px`} />
+      <FloatingCoinIcon1 width={`190px`} />
     </Container>
   );
 };
