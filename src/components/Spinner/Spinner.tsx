@@ -21,7 +21,7 @@ const float = keyframes`
 		transform: translatex(0px);
 	}
 	50% {
-		transform: translatex(35px);
+		transform: translatex(50px);
 	}
 	100% {
 		transform: translatey(0px);
