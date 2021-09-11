@@ -18,14 +18,14 @@ const rotate = keyframes`
 const float2 = keyframes`
 	0% {
 		transform: translatey(0px);
-		transform: translatex(-50%);
+		transform: translatex(-60%);
 	}
 	50% {
 		transform: translatex(0px);
 	}
 	100% {
 		transform: translatey(0px);
-		transform: translatex(-50%);
+		transform: translatex(-60%);
 	}
 `;
 
@@ -35,11 +35,11 @@ const float = keyframes`
 		transform: translatex(40%);
 	}
 	50% {
-		transform: translatex(0px);
+		transform: translatex(-40%);
 	}
 	100% {
 		transform: translatey(0px);
-		transform: translatex(-40%);
+		transform: translatex(0px);
 	}
 `;
 
@@ -75,7 +75,7 @@ const FloatingCoinIcon = styled(VenetianXIcon)`
   top: 1%;
   left: 1%;
   animation: ${rotate} 2s linear infinite;
-  animation: ${float} 6s ease-in-out infinite;
+  animation: ${float} 6.5s ease-in-out infinite;
   transform: translate3d(0, 0, 0);
 `;
 const FloatingCoinIcon1 = styled(VChipIcon)`
@@ -91,7 +91,7 @@ const FloatingCoinIcon2 = styled(BankIcon)`
   top: 1%;
   left: 1%;
   animation: ${rotate} 2s linear infinite;
-  animation: ${float2} 5s ease-in-out infinite;
+  animation: ${float2} 5.5s ease-in-out infinite;
   transform: translate3d(0, 0, 0);
 `;
 
