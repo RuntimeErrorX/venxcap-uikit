@@ -41,6 +41,7 @@ const VenetianXIcons = styled(VenetianXIcon)`
 `;
 
 const FloatingCoinIcon = styled(VenetianXIcon)`
+  animation: ${rotate} 2s linear infinite;
   animation: ${float} 6s ease-in-out infinite;
   transform: translate3d(0, 0, 0);
 `;
@@ -48,8 +49,8 @@ const FloatingCoinIcon = styled(VenetianXIcon)`
 const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
   return (
     <Container>
-      <VenetianXIcons width={`175px`} />
-      {/* <FloatingCoinIcon width={`210px`} /> */}
+      {/* <VenetianXIcons width={`175px`} /> */}
+      <FloatingCoinIcon width={`190px`} />
     </Container>
   );
 };
