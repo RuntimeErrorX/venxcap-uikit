@@ -20,7 +20,7 @@ const float = keyframes`
 		transform: translatex(0px);
 	}
 	50% {
-		transform: translatex(35px);
+		transform: translatex(25px);
 	}
 	100% {
 		transform: translatey(0px);
@@ -37,27 +37,30 @@ const VenetianXIcons = styled(VenetianXIcon)`
   padding-top: 1%;
   margin: auto 0px;
   text-align:center;
+  animation: ${float} 6s ease-in-out infinite;
   animation: ${rotate} 2.5s linear infinite;
   transform: translate3d(0, 0, 0);
 `;
 
-// const VChipIcons = styled(VChipIcon)`
-//   position: absolute;
-//   padding-top: 1%;
-//   margin: auto 0px;
-//   text-align:center;
-//   animation: ${rotate} 3.25s linear infinite;
-//   transform: translate3d(0, 0, 0);
-// `;
+const VChipIcons = styled(VChipIcon)`
+  position: absolute;
+  padding-top: 1%;
+  margin: auto 0px;
+  text-align:center;
+  animation: ${float} 6s ease-in-out infinite;
+  animation: ${rotate} 3.25s linear infinite;
+  transform: translate3d(0, 0, 0);
+`;
 
-// const BankIcons = styled(BankIcon)`
-//   position: absolute;
-//   padding-top: 1%;
-//   margin: auto 0px;
-//   text-align:center;
-//   animation: ${rotate} 4s linear infinite;
-//   transform: translate3d(0, 0, 0);
-// `;
+const BankIcons = styled(BankIcon)`
+  position: absolute;
+  padding-top: 1%;
+  margin: auto 0px;
+  text-align:center;
+  animation: ${float} 6s ease-in-out infinite;
+  animation: ${rotate} 4s linear infinite;
+  transform: translate3d(0, 0, 0);
+`;
 
 const FloatingCoinIcon = styled(VenetianXIcon)`
   animation: ${float} 6s ease-in-out infinite;
@@ -67,8 +70,8 @@ const FloatingCoinIcon = styled(VenetianXIcon)`
 const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
   return (
     <Container>
-      {/* <BankIcons width={`175px`} />
-      <VChipIcons width={'175px'} /> */}
+      <BankIcons width={`175px`} />
+      <VChipIcons width={'175px'} />
       <VenetianXIcons width={`175px`} />
       {/* <FloatingCoinIcon width={`210px`} /> */}
     </Container>
