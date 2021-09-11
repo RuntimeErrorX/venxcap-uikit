@@ -31,29 +31,29 @@ const float2 = keyframes`
 
 const float = keyframes`
 	0% {
-		transform: translatey(-35%);
+		transform: translatey(0px);
 		transform: translatex(0px);
 	}
 	50% {
-		transform: translatex(35%);
+		transform: translatex(40%);
 	}
 	100% {
 		transform: translatey(0px);
-		transform: translatex(0px);
+		transform: translatex(-40%);
 	}
 `;
 
 const float1 = keyframes`
 	0% {
 		transform: translatey(0px);
-		transform: translatex(50%);
+		transform: translatex(70%);
 	}
 	50% {
 		transform: translatex(0px);
 	}
 	100% {
 		transform: translatey(0px);
-		transform: translatex(50%);
+		transform: translatex(70%);
 	}
 `;
 
