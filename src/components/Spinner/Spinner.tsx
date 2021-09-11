@@ -44,23 +44,26 @@ const VenetianXIcons = styled(VenetianXIcon)`
 
 const FloatingCoinIcon = styled(VenetianXIcon)`
   z-index: 3;
-  position: absolute;
+  top: 1%;
+  left: 1%;
   animation: ${rotate} 2s linear infinite;
   animation: ${float} 6s ease-in-out infinite;
   transform: translate3d(0, 0, 0);
 `;
 const FloatingCoinIcon1 = styled(VChipIcon)`
   z-index: 2;
-  position: absolute;
+  top: 1%;
+  left: 1%;
   animation: ${rotate} 2s linear infinite;
-  animation: ${float} 5.25s ease-in-out infinite;
+  animation: ${float} 5.5s ease-in-out infinite;
   transform: translate3d(0, 0, 0);
 `;
 const FloatingCoinIcon2 = styled(BankIcon)`
   z-index: 1;
-  position: absolute;
+  top: 1%;
+  left: 1%;
   animation: ${rotate} 2s linear infinite;
-  animation: ${float} 4.75s ease-in-out infinite;
+  animation: ${float} 5s ease-in-out infinite;
   transform: translate3d(0, 0, 0);
 `;
 
@@ -68,8 +71,8 @@ const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
   return (
     <Container>
       {/* <VenetianXIcons width={`175px`} /> */}
-      <FloatingCoinIcon1 width={`190px`} />
       <FloatingCoinIcon2 width={`190px`} />
+      <FloatingCoinIcon1 width={`190px`} />
       <FloatingCoinIcon width={`190px`} />
     </Container>
   );
