@@ -18,14 +18,14 @@ const rotate = keyframes`
 const float2 = keyframes`
 	0% {
 		transform: translatey(0px);
-		transform: translatex(-70%);
+		transform: translatex(-50%);
 	}
 	50% {
 		transform: translatex(0px);
 	}
 	100% {
 		transform: translatey(0px);
-		transform: translatex(-70%);
+		transform: translatex(-50%);
 	}
 `;
 
