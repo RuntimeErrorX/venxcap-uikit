@@ -3823,20 +3823,36 @@ var links = [
         icon: "InfoIcon",
         items: [
             {
-                label: "Overview",
-                href: "https://pancakeswap.info",
+                label: "Factory",
+                href: "https://bscscan.com/token/[contract%20address]",
             },
             {
-                label: "Tokens",
-                href: "https://pancakeswap.info/tokens",
+                label: "Router V2",
+                href: "https://bscscan.com/token/[contract%20address]",
             },
             {
-                label: "Pairs",
-                href: "https://pancakeswap.info/pairs",
+                label: "Master Chef",
+                href: "https://bscscan.com/token/[contract%20address]",
             },
             {
-                label: "Accounts",
-                href: "https://pancakeswap.info/accounts",
+                label: "The Wolf",
+                href: "https://bscscan.com/token/[contract%20address]",
+            },
+            {
+                label: "(vXc) Venetian X",
+                href: "https://bscscan.com/token/[contract%20address]",
+            },
+            {
+                label: "(vChip) vChip",
+                href: "https://bscscan.com/token/[contract%20address]",
+            },
+            {
+                label: "(Bank) Bank",
+                href: "https://bscscan.com/token/[contract%20address]",
+            },
+            {
+                label: "(JKR) Jokers Rewards",
+                href: "https://bscscan.com/token/[contract%20address]",
             },
         ],
     },
@@ -3878,10 +3894,6 @@ var links = [
                 label: 'Blog',
                 href: 'https://venetianxcapital.medium.com',
             },
-            // {
-            //   label: t('Merch'),
-            //   href: 'https://pancakeswap.creator-spring.com/',
-            // },
         ],
     },
 ];
