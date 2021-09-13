@@ -7,6 +7,7 @@ import Logo from "./components/Logo";
 import Panel from "./components/Panel";
 import UserBlock from "./UserBlock";
 import { Flex } from "../../components/Flex";
+import CakePrice from "./../Menu/components/CakePrice"
 // import Avatar from "./Avatar";
 import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
@@ -120,6 +121,7 @@ const Menu: React.FC<NavProps> = ({
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
+        <CakePrice vxcPriceUsd={vxcPriceUsd} isDark={isDark} />
         {/* {userMenu} */}
         <Flex>
           <UserBlock account={account} login={login} logout={logout} />
