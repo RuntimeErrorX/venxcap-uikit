@@ -3946,6 +3946,12 @@ var socials = [
         label: "Twitter",
         icon: "TwitterIcon",
         href: "https://twitter.com/capitalvenetian",
+        items: [
+            {
+                label: "English",
+                href: "https://t.me/VenetianXCapital",
+            },
+        ],
     },
 ];
 var MENU_HEIGHT = 64;
