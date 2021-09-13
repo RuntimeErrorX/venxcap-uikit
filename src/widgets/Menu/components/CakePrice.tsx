@@ -5,7 +5,7 @@ import Text from "../../../components/Text/Text";
 import Skeleton from "../../../components/Skeleton/Skeleton";
 
 interface Props {
-  cakePriceUsd?: number;
+  vxcPriceUsd?: number;
   isDark: boolean;
 }
 
@@ -22,18 +22,18 @@ const PriceLink = styled.a`
   }
 `;
 
-const CakePrice: React.FC<Props> = ({ cakePriceUsd, isDark }) => {
-  return cakePriceUsd ? (
+const VXCPrice: React.FC<Props> = ({ vxcPriceUsd, isDark }) => {
+  return vxcPriceUsd ? (
     <PriceLink
       href="http://localhost:3000/swap?outputCurrency=0xdA94C8c31e2B0426CEf30E42964cE4d3aa9B06d3"
       target="_blank"
     >
       <VenetianXRound width="24px" mr="8px" isDark={isDark} />
-      <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+      <Text color="textSubtle" bold>{`$${vxcPriceUsd.toFixed(5)}`}</Text>
     </PriceLink>
   ) : (
     <Skeleton width={80} height={24} />
   );
 };
 
-export default React.memo(CakePrice);
+export default React.memo(VXCPrice);
