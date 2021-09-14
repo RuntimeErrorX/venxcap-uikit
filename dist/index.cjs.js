@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var React = require('react');
+var React$1 = require('react');
 var styled = require('styled-components');
 var styledSystem = require('styled-system');
 var get = require('lodash/get');
@@ -18,7 +18,7 @@ var reactTransitionGroup = require('react-transition-group');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React$1);
 var styled__default = /*#__PURE__*/_interopDefaultLegacy(styled);
 var get__default = /*#__PURE__*/_interopDefaultLegacy(get);
 var uniqueId__default = /*#__PURE__*/_interopDefaultLegacy(uniqueId);
@@ -266,13 +266,13 @@ var Button = function (props) {
     }
     return (React__default['default'].createElement(StyledButton, __assign({ "$isLoading": isLoading, className: classNames.join(" "), disabled: isDisabled }, internalProps, rest),
         React__default['default'].createElement(React__default['default'].Fragment, null,
-            React.isValidElement(startIcon) &&
-                React.cloneElement(startIcon, {
+            React$1.isValidElement(startIcon) &&
+                React$1.cloneElement(startIcon, {
                     mr: "0.5rem",
                 }),
             children,
-            React.isValidElement(endIcon) &&
-                React.cloneElement(endIcon, {
+            React$1.isValidElement(endIcon) &&
+                React$1.cloneElement(endIcon, {
                     ml: "0.5rem",
                 }))));
 };
@@ -1426,7 +1426,7 @@ var insertSeparators = function (items, separator) {
 var DefaultSeparator = React__default['default'].createElement(Icon$1q, { color: "currentColor", width: "24px" });
 var Breadcrumbs = function (_a) {
     var _b = _a.separator, separator = _b === void 0 ? DefaultSeparator : _b, children = _a.children;
-    var validItems = React.Children.toArray(children).filter(function (child) { return React.isValidElement(child); });
+    var validItems = React$1.Children.toArray(children).filter(function (child) { return React$1.isValidElement(child); });
     var items = insertSeparators(validItems, separator);
     return (React__default['default'].createElement(StyledBreadcrumbs, null, items.map(function (item, index) { return (React__default['default'].createElement("li", { key: "child-" + index }, item)); })));
 };
@@ -1461,8 +1461,8 @@ var StyledButtonMenu = styled__default['default'].div(templateObject_1$W || (tem
 }, styledSystem.space);
 var ButtonMenu$1 = function (_a) {
     var _b = _a.activeIndex, activeIndex = _b === void 0 ? 0 : _b, _c = _a.scale, scale = _c === void 0 ? scales$8.MD : _c, _d = _a.variant, variant = _d === void 0 ? variants$6.PRIMARY : _d, onItemClick = _a.onItemClick, disabled = _a.disabled, children = _a.children, _e = _a.fullWidth, fullWidth = _e === void 0 ? false : _e, props = __rest(_a, ["activeIndex", "scale", "variant", "onItemClick", "disabled", "children", "fullWidth"]);
-    return (React__default['default'].createElement(StyledButtonMenu, __assign({ disabled: disabled, variant: variant, fullWidth: fullWidth }, props), React.Children.map(children, function (child, index) {
-        return React.cloneElement(child, {
+    return (React__default['default'].createElement(StyledButtonMenu, __assign({ disabled: disabled, variant: variant, fullWidth: fullWidth }, props), React$1.Children.map(children, function (child, index) {
+        return React$1.cloneElement(child, {
             isActive: activeIndex === index,
             onClick: onItemClick ? function () { return onItemClick(index); } : undefined,
             scale: scale,
@@ -1759,7 +1759,7 @@ var StyledWrapper = styled__default['default'].div(templateObject_1$L || (templa
     var $width = _a.$width, $height = _a.$height;
     return ($height / $width) * 100;
 }, styledSystem.space);
-var Wrapper$3 = React.forwardRef(function (_a, ref) {
+var Wrapper$3 = React$1.forwardRef(function (_a, ref) {
     var width = _a.width, height = _a.height, props = __rest(_a, ["width", "height"]);
     return React__default['default'].createElement(StyledWrapper, __assign({ ref: ref, "$width": width, "$height": height }, props));
 });
@@ -1768,8 +1768,8 @@ var templateObject_1$L;
 var StyledBackgroundImage = styled__default['default'](Wrapper$3)(templateObject_1$K || (templateObject_1$K = __makeTemplateObject(["\n  background-repeat: no-repeat;\n  background-size: contain;\n"], ["\n  background-repeat: no-repeat;\n  background-size: contain;\n"])));
 var BackgroundImage = function (_a) {
     var src = _a.src, width = _a.width, height = _a.height, props = __rest(_a, ["src", "width", "height"]);
-    var ref = React.useRef(null);
-    React.useEffect(function () {
+    var ref = React$1.useRef(null);
+    React$1.useEffect(function () {
         var observer;
         if (ref.current) {
             var div_1 = ref.current;
@@ -1798,9 +1798,9 @@ var StyledImage = styled__default['default'].img(templateObject_1$J || (template
 var Placeholder = styled__default['default'].div(templateObject_2$l || (templateObject_2$l = __makeTemplateObject(["\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n"], ["\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n"])));
 var Image = function (_a) {
     var src = _a.src, alt = _a.alt, width = _a.width, height = _a.height, props = __rest(_a, ["src", "alt", "width", "height"]);
-    var imgRef = React.useRef(null);
-    var _b = React.useState(false), isLoaded = _b[0], setIsLoaded = _b[1];
-    React.useEffect(function () {
+    var imgRef = React$1.useRef(null);
+    var _b = React$1.useState(false), isLoaded = _b[0], setIsLoaded = _b[1];
+    React$1.useEffect(function () {
         var observer;
         if (imgRef.current) {
             observer = new IntersectionObserver(function (entries) {
@@ -1959,7 +1959,7 @@ var Dot = styled__default['default'].span(templateObject_2$j || (templateObject_
 var NotificationDot = function (_a) {
     var _b = _a.show, show = _b === void 0 ? false : _b, children = _a.children, props = __rest(_a, ["show", "children"]);
     return (React__default['default'].createElement(NotificationDotRoot, null,
-        React.Children.map(children, function (child) { return React.cloneElement(child, props); }),
+        React$1.Children.map(children, function (child) { return React$1.cloneElement(child, props); }),
         React__default['default'].createElement(Dot, { show: show })));
 };
 var templateObject_1$C, templateObject_2$j;
@@ -2642,7 +2642,7 @@ var makeHeaderRender = function (label, render) {
     return render ? function () { return render({ label: label }); } : function () { return label; };
 };
 var useTable = function (columns, data, options) {
-    var columnsWithSorting = React.useMemo(function () {
+    var columnsWithSorting = React$1.useMemo(function () {
         return columns.map(function (column) {
             return __assign(__assign({}, column), { label: column.label ? column.label : column.name, hidden: column.hidden ? column.hidden : false, sort: column.sort, sorted: {
                     on: false,
@@ -2650,8 +2650,8 @@ var useTable = function (columns, data, options) {
                 } });
         });
     }, [columns]);
-    var columnsByName = React.useMemo(function () { return getColumnsByName(columnsWithSorting); }, [columnsWithSorting]);
-    var tableData = React.useMemo(function () {
+    var columnsByName = React$1.useMemo(function () { return getColumnsByName(columnsWithSorting); }, [columnsWithSorting]);
+    var tableData = React$1.useMemo(function () {
         var sortedData = sortDataInOrder(data, columnsWithSorting);
         var newData = sortedData.map(function (row, idx) {
             return {
@@ -2675,7 +2675,7 @@ var useTable = function (columns, data, options) {
         return newData;
     }, [data, columnsWithSorting, columnsByName]);
     var reducer = createReducer();
-    var _a = React.useReducer(reducer, {
+    var _a = React$1.useReducer(reducer, {
         columns: columnsWithSorting,
         columnsByName: columnsByName,
         originalRows: tableData,
@@ -2696,20 +2696,20 @@ var useTable = function (columns, data, options) {
             prevPage: noop__default['default'],
         },
     }), state = _a[0], dispatch = _a[1];
-    state.pagination.nextPage = React.useCallback(function () {
+    state.pagination.nextPage = React$1.useCallback(function () {
         dispatch({ type: "NEXT_PAGE" });
     }, [dispatch]);
-    state.pagination.prevPage = React.useCallback(function () { return dispatch({ type: "PREV_PAGE" }); }, [dispatch]);
-    React.useEffect(function () {
+    state.pagination.prevPage = React$1.useCallback(function () { return dispatch({ type: "PREV_PAGE" }); }, [dispatch]);
+    React$1.useEffect(function () {
         dispatch({ type: "SET_ROWS", data: tableData });
     }, [tableData]);
-    var headers = React.useMemo(function () {
+    var headers = React$1.useMemo(function () {
         return __spreadArray([], state.columns.map(function (column) {
             var label = column.label ? column.label : column.name;
             return __assign(__assign({}, column), { render: makeHeaderRender(label, column.headerRender) });
         }));
     }, [state.columns]);
-    React.useEffect(function () {
+    React$1.useEffect(function () {
         if (options && options.filter) {
             dispatch({ type: "GLOBAL_FILTER", filter: options.filter });
         }
@@ -2742,9 +2742,9 @@ var Inner$1 = styled__default['default'](Flex$1)(templateObject_2$c || (template
 var ButtonMenu = function (_a) {
     var _b = _a.activeIndex, activeIndex = _b === void 0 ? 0 : _b, onItemClick = _a.onItemClick, children = _a.children;
     return (React__default['default'].createElement(Wrapper$1, { p: ["0 4px", "0 16px"] },
-        React__default['default'].createElement(Inner$1, null, React.Children.map(children, function (child, index) {
+        React__default['default'].createElement(Inner$1, null, React$1.Children.map(children, function (child, index) {
             var isActive = activeIndex === index;
-            return React.cloneElement(child, {
+            return React$1.cloneElement(child, {
                 isActive: isActive,
                 onClick: onItemClick ? function () { return onItemClick(index); } : undefined,
                 color: isActive ? "backgroundAlt" : "textSubtle",
@@ -2992,7 +2992,7 @@ var mediaQueries = (function () {
 })();
 var getKey = function (size) { return "is" + size.charAt(0).toUpperCase() + size.slice(1); };
 var useMatchBreakpoints = function () {
-    var _a = React.useState(function () {
+    var _a = React$1.useState(function () {
         return Object.keys(mediaQueries).reduce(function (accum, size) {
             var _a;
             var key = getKey(size);
@@ -3000,7 +3000,7 @@ var useMatchBreakpoints = function () {
             return __assign(__assign({}, accum), (_a = {}, _a[key] = mql.matches, _a));
         }, {});
     }), state = _a[0], setState = _a[1];
-    React.useEffect(function () {
+    React$1.useEffect(function () {
         // Create listeners for each media query returning a function to unsubscribe
         var handlers = Object.keys(mediaQueries).map(function (size) {
             var mql = window.matchMedia(mediaQueries[size]);
@@ -3084,7 +3084,7 @@ var defaultOptions = {
  */
 var useParticleBurst = function (options) {
     var _a = __assign(__assign({}, defaultOptions), options), selector = _a.selector, numberOfParticles = _a.numberOfParticles, debounceDuration = _a.debounceDuration, imgSrc = _a.imgSrc, disableWhen = _a.disableWhen, particleOptions = _a.particleOptions;
-    var makeListener = React.useCallback(function () {
+    var makeListener = React$1.useCallback(function () {
         return debounce__default['default'](function (event) {
             var isDisabled = disableWhen && disableWhen();
             if (!isDisabled) {
@@ -3106,7 +3106,7 @@ var useParticleBurst = function (options) {
         }, debounceDuration, { leading: true });
     }, [debounceDuration, numberOfParticles, imgSrc, disableWhen, particleOptions]);
     var listener = makeListener();
-    var initialize = React.useCallback(function () {
+    var initialize = React$1.useCallback(function () {
         if (selector) {
             document.querySelectorAll(selector).forEach(function (element) {
                 element.addEventListener("click", listener);
@@ -3116,7 +3116,7 @@ var useParticleBurst = function (options) {
             document.addEventListener("click", listener);
         }
     }, [selector, listener]);
-    var teardown = React.useCallback(function () {
+    var teardown = React$1.useCallback(function () {
         if (selector) {
             document.querySelectorAll(selector).forEach(function (element) {
                 element.removeEventListener("click", listener);
@@ -3126,7 +3126,7 @@ var useParticleBurst = function (options) {
             document.removeEventListener("click", listener);
         }
     }, [selector, listener]);
-    React.useEffect(function () {
+    React$1.useEffect(function () {
         initialize();
         return function () { return teardown(); };
     }, [initialize, teardown]);
@@ -3134,7 +3134,7 @@ var useParticleBurst = function (options) {
 };
 
 var useKonamiCheatCode = function (matchedCodeHandler) {
-    React.useEffect(function () {
+    React$1.useEffect(function () {
         var pattern = [
             "ArrowUp",
             "ArrowUp",
@@ -3313,13 +3313,13 @@ var invertTheme = function (currentTheme) {
 var portalRoot = document.getElementById("portal-root");
 var useTooltip = function (content, options) {
     var _a = options.placement, placement = _a === void 0 ? "auto" : _a, _b = options.trigger, trigger = _b === void 0 ? "hover" : _b, _c = options.arrowPadding, arrowPadding = _c === void 0 ? 16 : _c, _d = options.tooltipPadding, tooltipPadding = _d === void 0 ? { left: 16, right: 16 } : _d, _e = options.tooltipOffset, tooltipOffset = _e === void 0 ? [0, 10] : _e;
-    var _f = React.useState(null), targetElement = _f[0], setTargetElement = _f[1];
-    var _g = React.useState(null), tooltipElement = _g[0], setTooltipElement = _g[1];
-    var _h = React.useState(null), arrowElement = _h[0], setArrowElement = _h[1];
-    var _j = React.useState(false), visible = _j[0], setVisible = _j[1];
-    var isHoveringOverTooltip = React.useRef(false);
-    var hideTimeout = React.useRef();
-    var hideTooltip = React.useCallback(function (e) {
+    var _f = React$1.useState(null), targetElement = _f[0], setTargetElement = _f[1];
+    var _g = React$1.useState(null), tooltipElement = _g[0], setTooltipElement = _g[1];
+    var _h = React$1.useState(null), arrowElement = _h[0], setArrowElement = _h[1];
+    var _j = React$1.useState(false), visible = _j[0], setVisible = _j[1];
+    var isHoveringOverTooltip = React$1.useRef(false);
+    var hideTimeout = React$1.useRef();
+    var hideTooltip = React$1.useCallback(function (e) {
         var hide = function () {
             e.stopPropagation();
             e.preventDefault();
@@ -3344,7 +3344,7 @@ var useTooltip = function (content, options) {
             hide();
         }
     }, [tooltipElement, trigger]);
-    var showTooltip = React.useCallback(function (e) {
+    var showTooltip = React$1.useCallback(function (e) {
         e.stopPropagation();
         e.preventDefault();
         setVisible(true);
@@ -3359,12 +3359,12 @@ var useTooltip = function (content, options) {
             }
         }
     }, [tooltipElement, targetElement, trigger]);
-    var toggleTooltip = React.useCallback(function (e) {
+    var toggleTooltip = React$1.useCallback(function (e) {
         e.stopPropagation();
         setVisible(!visible);
     }, [visible]);
     // Trigger = hover
-    React.useEffect(function () {
+    React$1.useEffect(function () {
         if (targetElement === null || trigger !== "hover")
             return undefined;
         if (isTouchDevice()) {
@@ -3383,7 +3383,7 @@ var useTooltip = function (content, options) {
         };
     }, [trigger, targetElement, hideTooltip, showTooltip]);
     // Keep tooltip open when cursor moves from the targetElement to the tooltip
-    React.useEffect(function () {
+    React$1.useEffect(function () {
         if (tooltipElement === null || trigger !== "hover")
             return undefined;
         tooltipElement.addEventListener("mouseenter", showTooltip);
@@ -3394,14 +3394,14 @@ var useTooltip = function (content, options) {
         };
     }, [trigger, tooltipElement, hideTooltip, showTooltip]);
     // Trigger = click
-    React.useEffect(function () {
+    React$1.useEffect(function () {
         if (targetElement === null || trigger !== "click")
             return undefined;
         targetElement.addEventListener("click", toggleTooltip);
         return function () { return targetElement.removeEventListener("click", toggleTooltip); };
     }, [trigger, targetElement, visible, toggleTooltip]);
     // Handle click outside
-    React.useEffect(function () {
+    React$1.useEffect(function () {
         if (trigger !== "click")
             return undefined;
         var handleClickOutside = function (_a) {
@@ -3419,7 +3419,7 @@ var useTooltip = function (content, options) {
         return function () { return document.removeEventListener("mousedown", handleClickOutside); };
     }, [trigger, targetElement, tooltipElement]);
     // Trigger = focus
-    React.useEffect(function () {
+    React$1.useEffect(function () {
         if (targetElement === null || trigger !== "focus")
             return undefined;
         targetElement.addEventListener("focus", showTooltip);
@@ -3514,7 +3514,7 @@ var ModalWrapper = styled__default['default'].div(templateObject_1$l || (templat
     var theme = _a.theme;
     return theme.zIndices.modal - 1;
 });
-var Context = React.createContext({
+var Context = React$1.createContext({
     isOpen: false,
     nodeId: "",
     modalNode: null,
@@ -3525,10 +3525,10 @@ var Context = React.createContext({
 });
 var ModalProvider = function (_a) {
     var children = _a.children;
-    var _b = React.useState(false), isOpen = _b[0], setIsOpen = _b[1];
-    var _c = React.useState(), modalNode = _c[0], setModalNode = _c[1];
-    var _d = React.useState(""), nodeId = _d[0], setNodeId = _d[1];
-    var _e = React.useState(true), closeOnOverlayClick = _e[0], setCloseOnOverlayClick = _e[1];
+    var _b = React$1.useState(false), isOpen = _b[0], setIsOpen = _b[1];
+    var _c = React$1.useState(), modalNode = _c[0], setModalNode = _c[1];
+    var _d = React$1.useState(""), nodeId = _d[0], setNodeId = _d[1];
+    var _e = React$1.useState(true), closeOnOverlayClick = _e[0], setCloseOnOverlayClick = _e[1];
     var handlePresent = function (node, newNodeId) {
         setModalNode(node);
         setIsOpen(true);
@@ -3567,14 +3567,14 @@ var useModal = function (modal, closeOnOverlayClick, updateOnPropsChange, modalI
     if (closeOnOverlayClick === void 0) { closeOnOverlayClick = true; }
     if (updateOnPropsChange === void 0) { updateOnPropsChange = false; }
     if (modalId === void 0) { modalId = "defaultNodeId"; }
-    var _a = React.useContext(Context), isOpen = _a.isOpen, nodeId = _a.nodeId, modalNode = _a.modalNode, setModalNode = _a.setModalNode, onPresent = _a.onPresent, onDismiss = _a.onDismiss, setCloseOnOverlayClick = _a.setCloseOnOverlayClick;
-    var onPresentCallback = React.useCallback(function () {
+    var _a = React$1.useContext(Context), isOpen = _a.isOpen, nodeId = _a.nodeId, modalNode = _a.modalNode, setModalNode = _a.setModalNode, onPresent = _a.onPresent, onDismiss = _a.onDismiss, setCloseOnOverlayClick = _a.setCloseOnOverlayClick;
+    var onPresentCallback = React$1.useCallback(function () {
         onPresent(modal, modalId);
     }, [modal, modalId, onPresent]);
     // Updates the "modal" component if props are changed
     // Use carefully since it might result in unnecessary rerenders
     // Typically if modal is staic there is no need for updates, use when you expect props to change
-    React.useEffect(function () {
+    React$1.useEffect(function () {
         // NodeId is needed in case there are 2 useModal hooks on the same page and one has updateOnPropsChange
         if (updateOnPropsChange && isOpen && nodeId === modalId) {
             var modalProps = get__default['default'](modal, "props");
@@ -3590,7 +3590,7 @@ var useModal = function (modal, closeOnOverlayClick, updateOnPropsChange, modalI
             }
         }
     }, [updateOnPropsChange, nodeId, modalId, isOpen, modal, modalNode, setModalNode]);
-    React.useEffect(function () {
+    React$1.useEffect(function () {
         setCloseOnOverlayClick(closeOnOverlayClick);
     }, [closeOnOverlayClick, setCloseOnOverlayClick]);
     return [onPresentCallback, onDismiss];
@@ -4046,7 +4046,7 @@ var AccordionContent = styled__default['default'].div(templateObject_2$6 || (tem
 });
 var Accordion = function (_a) {
     var label = _a.label, status = _a.status, icon = _a.icon, isPushed = _a.isPushed, pushNav = _a.pushNav, _b = _a.initialOpenState, initialOpenState = _b === void 0 ? false : _b, children = _a.children, className = _a.className, isActive = _a.isActive;
-    var _c = React.useState(initialOpenState), isOpen = _c[0], setIsOpen = _c[1];
+    var _c = React$1.useState(initialOpenState), isOpen = _c[0], setIsOpen = _c[1];
     var handleClick = function () {
         if (isPushed) {
             setIsOpen(function (prevState) { return !prevState; });
@@ -4318,7 +4318,7 @@ var getPreferredConfig = function (walletConfig) {
 };
 var ConnectModal = function (_a) {
     var login = _a.login, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b, _c = _a.displayCount, displayCount = _c === void 0 ? 3 : _c;
-    var _d = React.useState(false), showMore = _d[0], setShowMore = _d[1];
+    var _d = React$1.useState(false), showMore = _d[0], setShowMore = _d[1];
     var theme = styled.useTheme();
     var sortedConfig = getPreferredConfig(connectors);
     var displayListConfig = showMore ? sortedConfig : sortedConfig.slice(0, displayCount);
@@ -4355,7 +4355,7 @@ var Tooltip = styled__default['default'].div(templateObject_2$4 || (templateObje
 });
 var CopyToClipboard = function (_a) {
     var toCopy = _a.toCopy, children = _a.children, props = __rest(_a, ["toCopy", "children"]);
-    var _b = React.useState(false), isTooltipDisplayed = _b[0], setIsTooltipDisplayed = _b[1];
+    var _b = React$1.useState(false), isTooltipDisplayed = _b[0], setIsTooltipDisplayed = _b[1];
     var copyToClipboardWithCommand = function (content) {
         var el = document.createElement("textarea");
         el.value = content;
@@ -4420,9 +4420,15 @@ var UserBlock = function (_a) {
 var Flex = styled__default['default'].div(templateObject_1$9 || (templateObject_1$9 = __makeTemplateObject(["\n  display: flex;\n  ", "\n  ", "\n"], ["\n  display: flex;\n  ", "\n  ", "\n"])), styledSystem.flexbox, styledSystem.space);
 var templateObject_1$9;
 
-var createReactClass = require('create-react-class');
-var CryptoTicker = createReactClass({
+// import react from 'react'
+// import ReactDOM from "react-dom";
+// import React, { forwardRef, ComponentPropsWithoutRef, ComponentProps, ComponentPropsWithRef } from "react";
+require('create-react-class');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var CryptoTicker = React.createClass({
     componentDidMount: function () {
+        ReactDOM.findDOMNode;
         this.refs.coins.getDOMNode().setAttribute('coins', '1,1027,825,2010,5426,52,7083,6758,3718,1839,2087,8497,7278,10787,9082,10746,7288,1727,5692,6538,2,2083,74,5994,3890,6859,4943,3408,1697,2588,8757,8104,9377,7791');
         this.refs.coins.getDOMNode().setAttribute('currency', 'USD');
         this.refs.coins.getDOMNode().setAttribute('theme', 'dark');
@@ -4430,9 +4436,9 @@ var CryptoTicker = createReactClass({
         this.refs.coins.getDOMNode().setAttribute('show-symbol-logo', 'true');
     },
     render: function () {
-        return React__default['default'].createElement(React__default['default'].Fragment, null,
-            React__default['default'].createElement("script", { type: "text/javascript", src: "https://files.coinmarketcap.com/static/widget/coinMarquee.js" }),
-            React__default['default'].createElement("div", { ref: "coins", id: "coinmarketcap-widget-marquee" }));
+        return React.createElement(React.Fragment, null,
+            React.createElement("script", { type: "text/javascript", src: "https://files.coinmarketcap.com/static/widget/coinMarquee.js" }),
+            React.createElement("div", { ref: "coins", id: "coinmarketcap-widget-marquee" }));
         // <div>
         //     <span ref="test">Element with a custom attribute</span>
         // </div>;
@@ -4493,10 +4499,10 @@ var Menu$1 = function (_a) {
     var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, vxcPriceUsd = _a.vxcPriceUsd, vchipPriceUsd = _a.vchipPriceUsd, bankPriceUsd = _a.bankPriceUsd, links = _a.links, children = _a.children;
     var isXl = useMatchBreakpoints().isXl;
     var isMobile = isXl === false;
-    var _c = React.useState(!isMobile), isPushed = _c[0], setIsPushed = _c[1];
-    var _d = React.useState(true), showMenu = _d[0], setShowMenu = _d[1];
-    var refPrevOffset = React.useRef(window.pageYOffset);
-    React.useEffect(function () {
+    var _c = React$1.useState(!isMobile), isPushed = _c[0], setIsPushed = _c[1];
+    var _d = React$1.useState(true), showMenu = _d[0], setShowMenu = _d[1];
+    var refPrevOffset = React$1.useRef(window.pageYOffset);
+    React$1.useEffect(function () {
         var handleScroll = function () {
             var currentOffset = window.pageYOffset;
             var isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
@@ -4623,11 +4629,11 @@ var Menu = styled__default['default'].div(templateObject_3 || (templateObject_3 
 }, UserMenuItem, UserMenuItem);
 var UserMenu = function (_a) {
     var account = _a.account, text = _a.text, avatarSrc = _a.avatarSrc, _b = _a.variant, variant = _b === void 0 ? variants.DEFAULT : _b, children = _a.children, props = __rest(_a, ["account", "text", "avatarSrc", "variant", "children"]);
-    var _c = React.useState(false), isOpen = _c[0], setIsOpen = _c[1];
-    var _d = React.useState(null), targetRef = _d[0], setTargetRef = _d[1];
-    var _e = React.useState(null), tooltipRef = _e[0], setTooltipRef = _e[1];
-    var hideTimeout = React.useRef();
-    var isHoveringOverTooltip = React.useRef(false);
+    var _c = React$1.useState(false), isOpen = _c[0], setIsOpen = _c[1];
+    var _d = React$1.useState(null), targetRef = _d[0], setTargetRef = _d[1];
+    var _e = React$1.useState(null), tooltipRef = _e[0], setTooltipRef = _e[1];
+    var hideTimeout = React$1.useRef();
+    var isHoveringOverTooltip = React$1.useRef(false);
     var accountEllipsis = account ? account.substring(0, 2) + "..." + account.substring(account.length - 4) : null;
     var _f = reactPopper.usePopper(targetRef, tooltipRef, {
         placement: "bottom-end",
@@ -4636,7 +4642,7 @@ var UserMenu = function (_a) {
     /**
      * See "useTooltip"
      */
-    React.useEffect(function () {
+    React$1.useEffect(function () {
         var showTooltip = function (evt) {
             setIsOpen(true);
             if (evt.target === targetRef) {
@@ -4728,11 +4734,11 @@ var StyledToast = styled__default['default'].div(templateObject_1$2 || (template
 });
 var Toast = function (_a) {
     var toast = _a.toast, onRemove = _a.onRemove, style = _a.style, ttl = _a.ttl, props = __rest(_a, ["toast", "onRemove", "style", "ttl"]);
-    var timer = React.useRef();
-    var ref = React.useRef(null);
-    var removeHandler = React.useRef(onRemove);
+    var timer = React$1.useRef();
+    var ref = React$1.useRef(null);
+    var removeHandler = React$1.useRef(onRemove);
     var id = toast.id, title = toast.title, description = toast.description, type = toast.type;
-    var handleRemove = React.useCallback(function () { return removeHandler.current(id); }, [id, removeHandler]);
+    var handleRemove = React$1.useCallback(function () { return removeHandler.current(id); }, [id, removeHandler]);
     var handleMouseEnter = function () {
         clearTimeout(timer.current);
     };
@@ -4744,7 +4750,7 @@ var Toast = function (_a) {
             handleRemove();
         }, ttl);
     };
-    React.useEffect(function () {
+    React$1.useEffect(function () {
         if (timer.current) {
             clearTimeout(timer.current);
         }
