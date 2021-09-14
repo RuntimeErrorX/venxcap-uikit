@@ -4414,20 +4414,17 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var CryptoTicker = createReactClass({
     componentDidMount: function () {
-        ReactDOM.findDOMNode;
-        this.refs.coins.getDOMNode().setAttribute('coins', '1,1027,825,2010,5426,52,7083,6758,3718,1839,2087,8497,7278,10787,9082,10746,7288,1727,5692,6538,2,2083,74,5994,3890,6859,4943,3408,1697,2588,8757,8104,9377,7791');
-        this.refs.coins.getDOMNode().setAttribute('currency', 'USD');
-        this.refs.coins.getDOMNode().setAttribute('theme', 'dark');
-        this.refs.coins.getDOMNode().setAttribute('transparent', 'true');
-        this.refs.coins.getDOMNode().setAttribute('show-symbol-logo', 'true');
+        var coinNode = ReactDOM.findDOMNode(this);
+        coinNode.setAttribute('coins', '1,1027,825,2010,5426,52,7083,6758,3718,1839,2087,8497,7278,10787,9082,10746,7288,1727,5692,6538,2,2083,74,5994,3890,6859,4943,3408,1697,2588,8757,8104,9377,7791');
+        coinNode.setAttribute('currency', 'USD');
+        coinNode.setAttribute('theme', 'dark');
+        coinNode.setAttribute('transparent', 'true');
+        coinNode.setAttribute('show-symbol-logo', 'true');
     },
     render: function () {
         return React.createElement(React.Fragment, null,
             React.createElement("script", { type: "text/javascript", src: "https://files.coinmarketcap.com/static/widget/coinMarquee.js" }),
             React.createElement("div", { ref: "coins", id: "coinmarketcap-widget-marquee" }));
-        // <div>
-        //     <span ref="test">Element with a custom attribute</span>
-        // </div>;
     }
 });
 
