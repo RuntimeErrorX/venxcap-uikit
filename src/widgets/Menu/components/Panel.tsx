@@ -10,15 +10,15 @@ interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
 }
 
+  // padding-bottom: ${({ showMenu }) => (showMenu ? "114px" : "0px")};
+  // transition: padding-bottom 0.2s ease 0.2s;
 const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   position: fixed;
   padding-top: ${({ showMenu }) => (showMenu ? "7px" : "120px")};
   transition: padding-top 0.2s ease 0.2s;
   padding-bottom: ${({ showMenu }) => (showMenu ? "7px" : "0px")};
   transition: padding-top 0.2s ease 0.2s;
-  padding-bottom: ${({ showMenu }) => (showMenu ? "114px" : "0px")};
-  transition: padding-bottom 0.2s ease 0.2s;
-  padding-top: ${({ showMenu }) => (showMenu ? "105px" : "0px")};
+  padding-top: ${({ showMenu }) => (showMenu ? "108px" : "0px")};
   transition: padding-top 0.2s ease 0.2s;
   left: 0;
   display: flex;

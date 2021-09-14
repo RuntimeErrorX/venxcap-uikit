@@ -25,8 +25,8 @@ const Wrapper = styled.div`
   // height: ${MENU_HEIGHT}px;
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
-  transition: top 0.2s;
-  padding-top: ${({ showMenu }) => (showMenu ? `60px` : `0px`)};
+  transition: top 0.21s;
+  padding-top: ${({ showMenu }) => (showMenu ? `68px` : `0px`)};
   left: 0;
   display: flex;
   justify-content: space-between;
