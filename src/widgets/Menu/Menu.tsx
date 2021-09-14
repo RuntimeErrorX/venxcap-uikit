@@ -7,7 +7,10 @@ import Logo from "./components/Logo";
 import Panel from "./components/Panel";
 import UserBlock from "./UserBlock";
 import { Flex } from "../../components/Flex";
-import CakePrice from "./../Menu/components/CakePrice"
+import CryptoTicker from "../Menu/components/Ticker"
+import VXCPrice from "./components/VXCPrice"
+import VChipPrice from "./../Menu/components/vChipPrice"
+import BankPrice from "./../Menu/components/BankPrice"
 // import Avatar from "./Avatar";
 import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
@@ -71,6 +74,8 @@ const Menu: React.FC<NavProps> = ({
   setLang,
   currentLang,
   vxcPriceUsd,
+  vchipPriceUsd,
+  bankPriceUsd,
   links,
   children,
 }) => {
@@ -121,7 +126,16 @@ const Menu: React.FC<NavProps> = ({
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
-        <CakePrice vxcPriceUsd={vxcPriceUsd} isDark={isDark} />
+        {/* <nav className="navbar navbar-fixed-bottom">
+            <ul className="navbar-nav ml-auto mr-auto">
+                <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+                <coingecko-coin-price-marquee-widget coin-ids="bitcoin,ethereum,chainlink,pancakeswap-token,dai,binance-usd,cardano,wbnb,sidekick-token" currency="usd" background-color="#111417" locale="en" font-color="#ffffff" vce-ready=""></coingecko-coin-price-marquee-widget>
+            </ul>
+        </nav> */}
+        <CryptoTicker />
+        <VXCPrice vxcPriceUsd={vxcPriceUsd} isDark={isDark} />
+        <VChipPrice vchipPriceUsd={vchipPriceUsd} isDark={isDark} />
+        <BankPrice bankPriceUsd={bankPriceUsd} isDark={isDark} />
         {/* {userMenu} */}
         <Flex>
           <UserBlock account={account} login={login} logout={logout} />

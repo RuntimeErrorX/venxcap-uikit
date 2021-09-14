@@ -4,7 +4,7 @@ import { CogIcon } from "../../../components/Svg";
 import IconButton from "../../../components/Button/IconButton";
 import { MENU_ENTRY_HEIGHT } from "../config";
 import { PanelProps, PushedProps } from "../types";
-import CakePrice from "./CakePrice";
+import VXCPrice from "./VXCPrice";
 import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
@@ -57,7 +57,7 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       <SocialEntry>
-        <CakePrice vxcPriceUsd={vxcPriceUsd} isDark={isDark} />
+        <VXCPrice vxcPriceUsd={vxcPriceUsd} isDark={isDark} />
         <SocialLinks />
       </SocialEntry>
       <SettingsEntry>

@@ -42,6 +42,9 @@ export interface PanelProps {
     isDark: boolean;
     toggleTheme: (isDark: boolean) => void;
     vxcPriceUsd?: number;
+    vchipPriceUsd?: number;
+    bankPriceUsd?: number;
+    spotLightPriceUsd?: number;
     currentLang: string;
     langs: Language[];
     setLang: (lang: Language) => void;
