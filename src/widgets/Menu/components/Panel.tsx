@@ -18,7 +18,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   transition: padding-top 0.2s ease 0.2s;
   padding-bottom: ${({ showMenu }) => (showMenu ? "7px" : "0px")};
   transition: padding-top 0.2s ease 0.2s;
-  padding-top: ${({ showMenu }) => (showMenu ? "108px" : "102px")};
+  padding-top: ${({ showMenu }) => (showMenu ? "108px" : "103px")};
   transition: padding-top 0.2s ease 0.2s;
   left: 0;
   display: flex;
