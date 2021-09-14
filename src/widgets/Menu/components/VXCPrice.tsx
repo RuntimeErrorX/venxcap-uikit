@@ -29,7 +29,7 @@ const VXCPrice: React.FC<Props> = ({ vxcPriceUsd, isDark }) => {
       target="_blank"
     >
       <VenetianXRound width="24px" mr="8px" isDark={isDark} />
-      <Text color="textSubtle" bold>{`$${vxcPriceUsd.toFixed(9)}`}</Text>
+      <Text color="textSubtle" bold>{`$${vxcPriceUsd.toFixed(5)}`}</Text>
     </PriceLink>
   ) : (
     <Skeleton width={80} height={24} />
