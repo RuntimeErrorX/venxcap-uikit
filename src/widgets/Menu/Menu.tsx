@@ -22,6 +22,7 @@ const Wrapper = styled.div`
 
 // transition: top 0.2s;-${MENU_HEIGHT}
   // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
+  // height: ${MENU_HEIGHT}px;
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
   transition: top 0.2s;
@@ -33,7 +34,6 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   padding-left: 8px;
   padding-right: 16px;
   width: 100%;
-  height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.background};
   z-index: 20;
   transform: translate3d(0, 0, 0);
