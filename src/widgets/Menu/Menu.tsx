@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
-  top: ${({ showMenu }) => (showMenu ? 0 : `62px`)};
+  top: ${({ showMenu }) => (showMenu ? `62px` : `0px`)};
   left: 0;
   display: flex;
   justify-content: space-between;
