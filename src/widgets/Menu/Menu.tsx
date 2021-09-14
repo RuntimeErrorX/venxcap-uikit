@@ -16,7 +16,6 @@ import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 
 const Wrapper = styled.div`
-  margin-top: 62px;
   position: relative;
   width: 100%;
 `;
@@ -25,7 +24,7 @@ const Wrapper = styled.div`
   // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
-  top: ${({ showMenu }) => (showMenu ? 0 : `0px`)};
+  top: ${({ showMenu }) => (showMenu ? 0 : `62px`)};
   left: 0;
   display: flex;
   justify-content: space-between;
