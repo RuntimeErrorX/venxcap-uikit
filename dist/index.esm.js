@@ -4162,10 +4162,10 @@ var StyledPanel = styled.div(templateObject_1$d || (templateObject_1$d = __makeT
     return (showMenu ? "0px" : "58px");
 }, function (_a) {
     var showMenu = _a.showMenu;
-    return (showMenu ? "58px" : "0px");
+    return (showMenu ? "116px" : "0px");
 }, function (_a) {
     var showMenu = _a.showMenu;
-    return (showMenu ? "58px" : "0px");
+    return (showMenu ? "116px" : "0px");
 }, function (_a) {
     var theme = _a.theme;
     return theme.nav.background;

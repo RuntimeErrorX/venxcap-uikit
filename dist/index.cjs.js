@@ -4176,10 +4176,10 @@ var StyledPanel = styled__default['default'].div(templateObject_1$d || (template
     return (showMenu ? "0px" : "58px");
 }, function (_a) {
     var showMenu = _a.showMenu;
-    return (showMenu ? "58px" : "0px");
+    return (showMenu ? "116px" : "0px");
 }, function (_a) {
     var showMenu = _a.showMenu;
-    return (showMenu ? "58px" : "0px");
+    return (showMenu ? "116px" : "0px");
 }, function (_a) {
     var theme = _a.theme;
     return theme.nav.background;
