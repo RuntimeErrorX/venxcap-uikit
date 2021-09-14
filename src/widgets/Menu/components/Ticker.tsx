@@ -28,10 +28,11 @@ const CryptoTicker: React.FC<Props> = ({ isDark }) => {
 
     
 return (
-    <>
-        <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
-            <div id="coinmarketcap-widget-marquee">
-        </div>
+    <>{/* <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+    <coingecko-coin-price-marquee-widget  
+    coin-ids="bitcoin,uniswap,pancakeswap-token,sushi,biswap,aave,venus,bancor,compound-coin,curve-dao-token,harvest-finance,apeswap-finance,pancake-bunny,treedefi,1inch,polycake-finance,mochiswap,cafeswap-token,polygonfarm-finance,swampy,yearn-finance-bit,polybull-finance,polycat-finance,goldfarm,yeld-finance" 
+    currency="usd" background-color="#1c1c1c" locale="en" font-color="#ffffff">
+    </coingecko-coin-price-marquee-widget> */}
     </>
   ) 
 };

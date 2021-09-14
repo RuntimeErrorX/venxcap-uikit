@@ -4440,7 +4440,7 @@ var BankPrice = function (_a) {
 var BankPrice$1 = React__default['default'].memo(BankPrice);
 var templateObject_1$7;
 
-var Wrapper = styled__default['default'].div(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
+var Wrapper = styled__default['default'].div(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  margin-top: 62px;\n  position: relative;\n  width: 100%;\n"], ["\n  margin-top: 62px;\n  position: relative;\n  width: 100%;\n"])));
 // transition: top 0.2s;-${MENU_HEIGHT}
 // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
 var StyledNav = styled__default['default'].nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {

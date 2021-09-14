@@ -16,6 +16,7 @@ import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 
 const Wrapper = styled.div`
+  margin-top: 62px;
   position: relative;
   width: 100%;
 `;
