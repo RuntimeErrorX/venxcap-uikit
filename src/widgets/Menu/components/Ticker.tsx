@@ -6,7 +6,7 @@ var createReactClass = require('create-react-class');
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-export const CryptoTicker = React.createClass({
+export const CryptoTicker = createReactClass({
     componentDidMount: function() {
         ReactDOM.findDOMNode
         this.refs.coins.getDOMNode().setAttribute('coins', '1,1027,825,2010,5426,52,7083,6758,3718,1839,2087,8497,7278,10787,9082,10746,7288,1727,5692,6538,2,2083,74,5994,3890,6859,4943,3408,1697,2588,8757,8104,9377,7791');
