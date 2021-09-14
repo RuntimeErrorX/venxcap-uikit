@@ -9,7 +9,7 @@ import UserBlock from "./UserBlock";
 import { Flex } from "../../components/Flex";
 import CryptoTicker from "../Menu/components/Ticker"
 import VXCPrice from "./components/VXCPrice"
-import VChipPrice from "./../Menu/components/vChipPrice"
+import VChipPrice from "./components/VChipPrice"
 import BankPrice from "./../Menu/components/BankPrice"
 // import Avatar from "./Avatar";
 import { NavProps } from "./types";

@@ -831,17 +831,17 @@ var VenetianXRound = function (_a) {
 };
 var VenetianXRound$1 = React$1.memo(VenetianXRound, function (prev, next) { return prev.isDark === next.isDark; });
 
-var VChipRound = function (_a) {
+var vChipRound = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
     var imgSrc = isDark ? "/images/logo/vChipLogoRound.png" : "/images/logo/vChipLogoRound.png"; // add light to end when there's another version
     return (React$1.createElement(Svg, __assign({ viewBox: "0 0 92 92" }, props),
         React$1.createElement("image", { width: "90", height: "90", href: imgSrc })));
 };
-var VChipRound$1 = React$1.memo(VChipRound, function (prev, next) { return prev.isDark === next.isDark; });
+var VChipRound = React$1.memo(vChipRound, function (prev, next) { return prev.isDark === next.isDark; });
 
 var BankRound = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
-    var imgSrc = isDark ? "/images/logo/BankRound.png" : "/images/logo/BankRound.png"; // add light to end when there's another version
+    var imgSrc = isDark ? "/images/logo/BankLogoRound.png" : "/images/logo/BankLogoRound.png"; // add light to end when there's another version
     return (React$1.createElement(Svg, __assign({ viewBox: "0 0 92 92" }, props),
         React$1.createElement("image", { width: "90", height: "90", href: imgSrc })));
 };
@@ -4095,7 +4095,7 @@ var VXCPrice = function (_a) {
     var vxcPriceUsd = _a.vxcPriceUsd, isDark = _a.isDark;
     return vxcPriceUsd ? (React$1.createElement(PriceLink$2, { href: "http://localhost:3000/swap?outputCurrency=0xdA94C8c31e2B0426CEf30E42964cE4d3aa9B06d3", target: "_blank" },
         React$1.createElement(VenetianXRound$1, { width: "24px", mr: "8px", isDark: isDark }),
-        React$1.createElement(Text, { color: "textSubtle", bold: true }, "$" + vxcPriceUsd.toFixed(7)))) : (React$1.createElement(Skeleton, { width: 80, height: 24 }));
+        React$1.createElement(Text, { color: "textSubtle", bold: true }, "$" + vxcPriceUsd.toFixed(9)))) : (React$1.createElement(Skeleton, { width: 80, height: 24 }));
 };
 var VXCPrice$1 = React$1.memo(VXCPrice);
 var templateObject_1$f;
@@ -4429,13 +4429,13 @@ var CryptoTicker = createReactClass({
 });
 
 var PriceLink$1 = styled.a(templateObject_1$8 || (templateObject_1$8 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
-var vChipPrice = function (_a) {
+var VChipPrice = function (_a) {
     var vchipPriceUsd = _a.vchipPriceUsd, isDark = _a.isDark;
     return vchipPriceUsd ? (React$1.createElement(PriceLink$1, { href: "http://localhost:3000/swap?outputCurrency=0x70eBEfC51cea896b1742DB245a31D96098b5B8E3", target: "_blank" },
-        React$1.createElement(VChipRound$1, { width: "24px", mr: "8px", isDark: isDark }),
-        React$1.createElement(Text, { color: "textSubtle", bold: true }, "$" + vchipPriceUsd.toFixed(7)))) : (React$1.createElement(Skeleton, { width: 80, height: 24 }));
+        React$1.createElement(VChipRound, { width: "24px", mr: "8px", isDark: isDark }),
+        React$1.createElement(Text, { color: "textSubtle", bold: true }, "$" + vchipPriceUsd.toFixed(10)))) : (React$1.createElement(Skeleton, { width: 80, height: 24 }));
 };
-var VChipPrice = React$1.memo(vChipPrice);
+var VChipPrice$1 = React$1.memo(VChipPrice);
 var templateObject_1$8;
 
 var PriceLink = styled.a(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
@@ -4443,7 +4443,7 @@ var BankPrice = function (_a) {
     var bankPriceUsd = _a.bankPriceUsd, isDark = _a.isDark;
     return bankPriceUsd ? (React$1.createElement(PriceLink, { href: "http://localhost:3000/swap?outputCurrency=0xca7F55bC7cD3ee83e69d3F366062D68617115F3c", target: "_blank" },
         React$1.createElement(BankRound$1, { width: "24px", mr: "8px", isDark: isDark }),
-        React$1.createElement(Text, { color: "textSubtle", bold: true }, "$" + bankPriceUsd.toFixed(7)))) : (React$1.createElement(Skeleton, { width: 80, height: 24 }));
+        React$1.createElement(Text, { color: "textSubtle", bold: true }, "$" + bankPriceUsd.toFixed(10)))) : (React$1.createElement(Skeleton, { width: 80, height: 24 }));
 };
 var BankPrice$1 = React$1.memo(BankPrice);
 var templateObject_1$7;
@@ -4520,7 +4520,7 @@ var Menu$1 = function (_a) {
             React$1.createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React$1.createElement(CryptoTicker, null),
             React$1.createElement(VXCPrice$1, { vxcPriceUsd: vxcPriceUsd, isDark: isDark }),
-            React$1.createElement(VChipPrice, { vchipPriceUsd: vchipPriceUsd, isDark: isDark }),
+            React$1.createElement(VChipPrice$1, { vchipPriceUsd: vchipPriceUsd, isDark: isDark }),
             React$1.createElement(BankPrice$1, { bankPriceUsd: bankPriceUsd, isDark: isDark }),
             React$1.createElement(Flex, null,
                 React$1.createElement(UserBlock, { account: account, login: login, logout: logout }))),
@@ -4773,4 +4773,4 @@ var ResetCSS = createGlobalStyle(templateObject_1 || (templateObject_1 = __makeT
 });
 var templateObject_1;
 
-export { Icon$1O as AddIcon, Alert, Icon$1N as ArrowBackIcon, Icon$1M as ArrowDownIcon, Icon$1L as ArrowDropDownIcon, Icon$1K as ArrowDropUpIcon, Icon$1J as ArrowFirstIcon, Icon$1I as ArrowForwardIcon, Icon$1H as ArrowLastIcon, Icon$1G as ArrowUpIcon, Icon$1F as AutoRenewIcon, BackgroundImage, BalanceInput, BankRound$1 as BankRound, GridLayout$1 as BaseLayout, Icon$1D as BinanceChainIcon, Icon$1E as BinanceIcon, Icon$1Q as BlockIcon, Icon$1C as BnbUsdtPairTokenIcon, Box, Breadcrumbs, Icon$1B as BunnyCardsIcon, Icon$1A as BunnyPlaceholderIcon, Button, ButtonMenu$1 as ButtonMenu, ButtonMenuItem, Icon$1x as CalculateIcon, Card, CardBody, CardFooter, CardHeader, CardRibbon, Icon$1y as CardViewIcon, Icon$1z as Cards, GridLayout as CardsLayout, Icon$1v as ChartIcon, Checkbox, Icon$1t as CheckmarkCircleFillIcon, Icon$1S as CheckmarkCircleIcon, Icon$1u as CheckmarkIcon, Icon$1s as ChevronDownIcon, Icon$1r as ChevronLeftIcon, Icon$1q as ChevronRightIcon, Icon$1p as ChevronUpIcon, Icon$1w as CircleOutlineIcon, Icon$1o as CloseIcon, Icon$1n as CogIcon, Icon$1m as Coin98Icon, Icon$1l as CommunityIcon, ConnectorNames, Icon$1k as CopyIcon, Icon$1j as CrownIcon, Dropdown, Icon$1i as EllipsisIcon, Icon$1R as ErrorIcon, ExpandableButton, ExpandableLabel, FallingBunnies, Flex$1 as Flex, Grid, Heading, Icon$1h as HelpIcon, Icon$1g as HistoryIcon, IconButton, Image, Icon$1P as InfoIcon, Input$1 as Input, Icon$1f as LanguageIcon, Icon$1e as LaurelLeftIcon, Icon$1d as LaurelRightIcon, Link, LinkExternal, Icon$1c as ListViewIcon, Icon$1b as LoginIcon, Icon$1a as LogoIcon, Icon$19 as LogoRoundIcon, Icon$17 as LogoutIcon, Icon$18 as MathWalletIcon, Icon$16 as MedalBronzeIcon, Icon$15 as MedalGoldIcon, Icon$14 as MedalPurpleIcon, Icon$13 as MedalSilverIcon, Icon$12 as MedalTealIcon, Menu$1 as Menu, Message, Icon$11 as MetamaskIcon, Icon$10 as MinusIcon, Modal, ModalBackButton, ModalBody, ModalCloseButton, ModalContainer, ModalHeader, ModalProvider, ModalTitle, Icon$$ as MoreHorizontalIcon, Icon$_ as MoreVerticalIcon, Icon$Z as NoProfileAvatarIcon, NotificationDot, Icon$Y as OpenNewIcon, Overlay, Icon$V as PancakeRoundIcon, PancakeToggle, Icon$X as PancakesIcon, Icon$W as PencilIcon, Icon$T as PlayCircleOutlineIcon, Icon$U as PocketWatchIcon, Icon$S as PredictionsIcon, Icon$M as PresentCheckIcon, Icon$K as PresentNoneIcon, Icon$L as PresentWonIcon, Icon$R as PrizeIcon, Progress, Icon$N as ProgressBunny, Icon$Q as ProposalIcon, Radio, Icon$J as RefreshIcon, Icon$P as RemoveIcon, ResetCSS, Icon$I as SafePalIcon, Icon$H as SearchIcon, Skeleton, Slider, Icon$G as SmallDotIcon, Spinner, Icon$F as StarFillIcon, Icon$E as StarLineIcon, Step, Stepper, Svg, Icon$D as SwapIcon, Icon$C as SwapVertIcon, Icon$B as SyncAltIcon, Tab, ButtonMenu as TabMenu, Tag, Icon$A as TeamPlayerIcon, Icon$z as TestnetIcon, Text, Icon$y as Ticket, Icon$x as TicketFillIcon, Icon$w as TicketRound, Icon$v as TimerIcon, ToastContainer, Toggle, TokenImage, TokenPairImage, Icon$u as TokenPocketIcon, TooltipText, Icon$t as TrophyGoldIcon, Icon$s as TrustWalletIcon, Icon$r as TuneIcon, UserMenu, UserMenuDivider, UserMenuItem, VChipRound$1 as VChipRound, VenetianXRound$1 as VenetianXRound, Icon$O as VerifiedIcon, Icon$q as VisibilityOff, Icon$p as VisibilityOn, Icon$o as VolumeOffIcon, Icon$n as VolumeUpIcon, Icon$m as VoteIcon, Icon$h as WaitIcon, Icon$k as WalletConnectIcon, Icon$i as WalletFilledIcon, Icon$j as WalletIcon, Icon$l as WarningIcon, variants$5 as alertVariants, byTextAscending, byTextDescending, connectorLocalStorageKey, darkTheme as dark, darkColors, lightTheme as light, lightColors, makeRender, links as menuConfig, status as menuStatus, types as toastTypes, useKonamiCheatCode, useMatchBreakpoints, useModal, useParticleBurst, useTable, useTooltip, useWalletModal };
+export { Icon$1O as AddIcon, Alert, Icon$1N as ArrowBackIcon, Icon$1M as ArrowDownIcon, Icon$1L as ArrowDropDownIcon, Icon$1K as ArrowDropUpIcon, Icon$1J as ArrowFirstIcon, Icon$1I as ArrowForwardIcon, Icon$1H as ArrowLastIcon, Icon$1G as ArrowUpIcon, Icon$1F as AutoRenewIcon, BackgroundImage, BalanceInput, BankRound$1 as BankRound, GridLayout$1 as BaseLayout, Icon$1D as BinanceChainIcon, Icon$1E as BinanceIcon, Icon$1Q as BlockIcon, Icon$1C as BnbUsdtPairTokenIcon, Box, Breadcrumbs, Icon$1B as BunnyCardsIcon, Icon$1A as BunnyPlaceholderIcon, Button, ButtonMenu$1 as ButtonMenu, ButtonMenuItem, Icon$1x as CalculateIcon, Card, CardBody, CardFooter, CardHeader, CardRibbon, Icon$1y as CardViewIcon, Icon$1z as Cards, GridLayout as CardsLayout, Icon$1v as ChartIcon, Checkbox, Icon$1t as CheckmarkCircleFillIcon, Icon$1S as CheckmarkCircleIcon, Icon$1u as CheckmarkIcon, Icon$1s as ChevronDownIcon, Icon$1r as ChevronLeftIcon, Icon$1q as ChevronRightIcon, Icon$1p as ChevronUpIcon, Icon$1w as CircleOutlineIcon, Icon$1o as CloseIcon, Icon$1n as CogIcon, Icon$1m as Coin98Icon, Icon$1l as CommunityIcon, ConnectorNames, Icon$1k as CopyIcon, Icon$1j as CrownIcon, Dropdown, Icon$1i as EllipsisIcon, Icon$1R as ErrorIcon, ExpandableButton, ExpandableLabel, FallingBunnies, Flex$1 as Flex, Grid, Heading, Icon$1h as HelpIcon, Icon$1g as HistoryIcon, IconButton, Image, Icon$1P as InfoIcon, Input$1 as Input, Icon$1f as LanguageIcon, Icon$1e as LaurelLeftIcon, Icon$1d as LaurelRightIcon, Link, LinkExternal, Icon$1c as ListViewIcon, Icon$1b as LoginIcon, Icon$1a as LogoIcon, Icon$19 as LogoRoundIcon, Icon$17 as LogoutIcon, Icon$18 as MathWalletIcon, Icon$16 as MedalBronzeIcon, Icon$15 as MedalGoldIcon, Icon$14 as MedalPurpleIcon, Icon$13 as MedalSilverIcon, Icon$12 as MedalTealIcon, Menu$1 as Menu, Message, Icon$11 as MetamaskIcon, Icon$10 as MinusIcon, Modal, ModalBackButton, ModalBody, ModalCloseButton, ModalContainer, ModalHeader, ModalProvider, ModalTitle, Icon$$ as MoreHorizontalIcon, Icon$_ as MoreVerticalIcon, Icon$Z as NoProfileAvatarIcon, NotificationDot, Icon$Y as OpenNewIcon, Overlay, Icon$V as PancakeRoundIcon, PancakeToggle, Icon$X as PancakesIcon, Icon$W as PencilIcon, Icon$T as PlayCircleOutlineIcon, Icon$U as PocketWatchIcon, Icon$S as PredictionsIcon, Icon$M as PresentCheckIcon, Icon$K as PresentNoneIcon, Icon$L as PresentWonIcon, Icon$R as PrizeIcon, Progress, Icon$N as ProgressBunny, Icon$Q as ProposalIcon, Radio, Icon$J as RefreshIcon, Icon$P as RemoveIcon, ResetCSS, Icon$I as SafePalIcon, Icon$H as SearchIcon, Skeleton, Slider, Icon$G as SmallDotIcon, Spinner, Icon$F as StarFillIcon, Icon$E as StarLineIcon, Step, Stepper, Svg, Icon$D as SwapIcon, Icon$C as SwapVertIcon, Icon$B as SyncAltIcon, Tab, ButtonMenu as TabMenu, Tag, Icon$A as TeamPlayerIcon, Icon$z as TestnetIcon, Text, Icon$y as Ticket, Icon$x as TicketFillIcon, Icon$w as TicketRound, Icon$v as TimerIcon, ToastContainer, Toggle, TokenImage, TokenPairImage, Icon$u as TokenPocketIcon, TooltipText, Icon$t as TrophyGoldIcon, Icon$s as TrustWalletIcon, Icon$r as TuneIcon, UserMenu, UserMenuDivider, UserMenuItem, VChipRound, VenetianXRound$1 as VenetianXRound, Icon$O as VerifiedIcon, Icon$q as VisibilityOff, Icon$p as VisibilityOn, Icon$o as VolumeOffIcon, Icon$n as VolumeUpIcon, Icon$m as VoteIcon, Icon$h as WaitIcon, Icon$k as WalletConnectIcon, Icon$i as WalletFilledIcon, Icon$j as WalletIcon, Icon$l as WarningIcon, variants$5 as alertVariants, byTextAscending, byTextDescending, connectorLocalStorageKey, darkTheme as dark, darkColors, lightTheme as light, lightColors, makeRender, links as menuConfig, status as menuStatus, types as toastTypes, useKonamiCheatCode, useMatchBreakpoints, useModal, useParticleBurst, useTable, useTooltip, useWalletModal };

@@ -845,17 +845,17 @@ var VenetianXRound = function (_a) {
 };
 var VenetianXRound$1 = React__default['default'].memo(VenetianXRound, function (prev, next) { return prev.isDark === next.isDark; });
 
-var VChipRound = function (_a) {
+var vChipRound = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
     var imgSrc = isDark ? "/images/logo/vChipLogoRound.png" : "/images/logo/vChipLogoRound.png"; // add light to end when there's another version
     return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 92 92" }, props),
         React__default['default'].createElement("image", { width: "90", height: "90", href: imgSrc })));
 };
-var VChipRound$1 = React__default['default'].memo(VChipRound, function (prev, next) { return prev.isDark === next.isDark; });
+var VChipRound = React__default['default'].memo(vChipRound, function (prev, next) { return prev.isDark === next.isDark; });
 
 var BankRound = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
-    var imgSrc = isDark ? "/images/logo/BankRound.png" : "/images/logo/BankRound.png"; // add light to end when there's another version
+    var imgSrc = isDark ? "/images/logo/BankLogoRound.png" : "/images/logo/BankLogoRound.png"; // add light to end when there's another version
     return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 92 92" }, props),
         React__default['default'].createElement("image", { width: "90", height: "90", href: imgSrc })));
 };
@@ -4109,7 +4109,7 @@ var VXCPrice = function (_a) {
     var vxcPriceUsd = _a.vxcPriceUsd, isDark = _a.isDark;
     return vxcPriceUsd ? (React__default['default'].createElement(PriceLink$2, { href: "http://localhost:3000/swap?outputCurrency=0xdA94C8c31e2B0426CEf30E42964cE4d3aa9B06d3", target: "_blank" },
         React__default['default'].createElement(VenetianXRound$1, { width: "24px", mr: "8px", isDark: isDark }),
-        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + vxcPriceUsd.toFixed(7)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
+        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + vxcPriceUsd.toFixed(9)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
 };
 var VXCPrice$1 = React__default['default'].memo(VXCPrice);
 var templateObject_1$f;
@@ -4443,13 +4443,13 @@ var CryptoTicker = createReactClass({
 });
 
 var PriceLink$1 = styled__default['default'].a(templateObject_1$8 || (templateObject_1$8 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
-var vChipPrice = function (_a) {
+var VChipPrice = function (_a) {
     var vchipPriceUsd = _a.vchipPriceUsd, isDark = _a.isDark;
     return vchipPriceUsd ? (React__default['default'].createElement(PriceLink$1, { href: "http://localhost:3000/swap?outputCurrency=0x70eBEfC51cea896b1742DB245a31D96098b5B8E3", target: "_blank" },
-        React__default['default'].createElement(VChipRound$1, { width: "24px", mr: "8px", isDark: isDark }),
-        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + vchipPriceUsd.toFixed(7)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
+        React__default['default'].createElement(VChipRound, { width: "24px", mr: "8px", isDark: isDark }),
+        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + vchipPriceUsd.toFixed(10)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
 };
-var VChipPrice = React__default['default'].memo(vChipPrice);
+var VChipPrice$1 = React__default['default'].memo(VChipPrice);
 var templateObject_1$8;
 
 var PriceLink = styled__default['default'].a(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
@@ -4457,7 +4457,7 @@ var BankPrice = function (_a) {
     var bankPriceUsd = _a.bankPriceUsd, isDark = _a.isDark;
     return bankPriceUsd ? (React__default['default'].createElement(PriceLink, { href: "http://localhost:3000/swap?outputCurrency=0xca7F55bC7cD3ee83e69d3F366062D68617115F3c", target: "_blank" },
         React__default['default'].createElement(BankRound$1, { width: "24px", mr: "8px", isDark: isDark }),
-        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + bankPriceUsd.toFixed(7)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
+        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + bankPriceUsd.toFixed(10)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
 };
 var BankPrice$1 = React__default['default'].memo(BankPrice);
 var templateObject_1$7;
@@ -4534,7 +4534,7 @@ var Menu$1 = function (_a) {
             React__default['default'].createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React__default['default'].createElement(CryptoTicker, null),
             React__default['default'].createElement(VXCPrice$1, { vxcPriceUsd: vxcPriceUsd, isDark: isDark }),
-            React__default['default'].createElement(VChipPrice, { vchipPriceUsd: vchipPriceUsd, isDark: isDark }),
+            React__default['default'].createElement(VChipPrice$1, { vchipPriceUsd: vchipPriceUsd, isDark: isDark }),
             React__default['default'].createElement(BankPrice$1, { bankPriceUsd: bankPriceUsd, isDark: isDark }),
             React__default['default'].createElement(Flex, null,
                 React__default['default'].createElement(UserBlock, { account: account, login: login, logout: logout }))),
@@ -4941,7 +4941,7 @@ exports.TuneIcon = Icon$r;
 exports.UserMenu = UserMenu;
 exports.UserMenuDivider = UserMenuDivider;
 exports.UserMenuItem = UserMenuItem;
-exports.VChipRound = VChipRound$1;
+exports.VChipRound = VChipRound;
 exports.VenetianXRound = VenetianXRound$1;
 exports.VerifiedIcon = Icon$O;
 exports.VisibilityOff = Icon$q;

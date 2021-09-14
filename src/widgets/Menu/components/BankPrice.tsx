@@ -29,7 +29,7 @@ const BankPrice: React.FC<Props> = ({ bankPriceUsd, isDark }) => {
       target="_blank"
     >
       <BankRound width="24px" mr="8px" isDark={isDark} />
-      <Text color="textSubtle" bold>{`$${bankPriceUsd.toFixed(7)}`}</Text>
+      <Text color="textSubtle" bold>{`$${bankPriceUsd.toFixed(10)}`}</Text>
     </PriceLink>
   ) : (
     <Skeleton width={80} height={24} />

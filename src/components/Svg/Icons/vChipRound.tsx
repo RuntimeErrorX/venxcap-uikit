@@ -6,7 +6,7 @@ interface LogoProps extends SvgProps {
   isDark: boolean;
 }
 
-const VChipRound: React.FC<LogoProps> = ({ isDark, ...props }) => {
+const vChipRound: React.FC<LogoProps> = ({ isDark, ...props }) => {
   const imgSrc = isDark ? "/images/logo/vChipLogoRound.png" : "/images/logo/vChipLogoRound.png"; // add light to end when there's another version
   return (
     <Svg viewBox="0 0 92 92" {...props}>
@@ -15,4 +15,4 @@ const VChipRound: React.FC<LogoProps> = ({ isDark, ...props }) => {
   );
 };
 
-export default React.memo(VChipRound, (prev, next) => prev.isDark === next.isDark);
+export default React.memo(vChipRound, (prev, next) => prev.isDark === next.isDark);

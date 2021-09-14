@@ -7,7 +7,7 @@ interface LogoProps extends SvgProps {
 }
 
 const BankRound: React.FC<LogoProps> = ({ isDark, ...props }) => {
-  const imgSrc = isDark ? "/images/logo/BankRound.png" : "/images/logo/BankRound.png"; // add light to end when there's another version
+  const imgSrc = isDark ? "/images/logo/BankLogoRound.png" : "/images/logo/BankLogoRound.png"; // add light to end when there's another version
   return (
     <Svg viewBox="0 0 92 92" {...props}>
         <image width="90" height="90" href={imgSrc}/>
