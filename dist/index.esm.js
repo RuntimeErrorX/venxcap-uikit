@@ -4162,7 +4162,7 @@ var StyledPanel = styled.div(templateObject_1$d || (templateObject_1$d = __makeT
     return (showMenu ? "0px" : "60px");
 }, function (_a) {
     var showMenu = _a.showMenu;
-    return (showMenu ? "114px" : "0px");
+    return (showMenu ? "110px" : "0px");
 }, function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? "110px" : "0px");
@@ -4435,9 +4435,9 @@ var templateObject_1$7;
 var Wrapper = styled.div(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
 // transition: top 0.2s;-${MENU_HEIGHT}
 // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
-var StyledNav = styled.nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  position: fixed;\n  transition: top 0.2s;\n  top: ", ";\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  transition: top 0.2s;\n  top: ", ";\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
+var StyledNav = styled.nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  position: fixed;\n  transition: top 0.2s;\n  padding-top: ", ";\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  transition: top 0.2s;\n  padding-top: ", ";\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
-    return (showMenu ? "62px" : "0px");
+    return (showMenu ? "60px" : "0px");
 }, MENU_HEIGHT, function (_a) {
     var theme = _a.theme;
     return theme.nav.background;
