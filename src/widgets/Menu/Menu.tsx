@@ -24,6 +24,7 @@ const Wrapper = styled.div`
   // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
+  transition: top 0.2s;
   top: ${({ showMenu }) => (showMenu ? `62px` : `0px`)};
   left: 0;
   display: flex;
