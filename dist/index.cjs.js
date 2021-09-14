@@ -10,7 +10,7 @@ var uniqueId = require('lodash/uniqueId');
 var lodash = require('lodash');
 var noop = require('lodash/noop');
 var debounce = require('lodash/debounce');
-var ReactDOM = require('react-dom');
+var reactDom = require('react-dom');
 var reactPopper = require('react-popper');
 var throttle = require('lodash/throttle');
 var reactRouterDom = require('react-router-dom');
@@ -24,7 +24,6 @@ var get__default = /*#__PURE__*/_interopDefaultLegacy(get);
 var uniqueId__default = /*#__PURE__*/_interopDefaultLegacy(uniqueId);
 var noop__default = /*#__PURE__*/_interopDefaultLegacy(noop);
 var debounce__default = /*#__PURE__*/_interopDefaultLegacy(debounce);
-var ReactDOM__default = /*#__PURE__*/_interopDefaultLegacy(ReactDOM);
 var throttle__default = /*#__PURE__*/_interopDefaultLegacy(throttle);
 
 /*! *****************************************************************************
@@ -3454,7 +3453,7 @@ var useTooltip = function (content, options) {
     var tooltip = (React__default['default'].createElement(StyledTooltip, __assign({ ref: setTooltipElement, style: styles.popper }, attributes.popper),
         React__default['default'].createElement(styled.ThemeProvider, { theme: invertTheme }, content),
         React__default['default'].createElement(Arrow, { ref: setArrowElement, style: styles.arrow })));
-    var tooltipInPortal = portalRoot ? ReactDOM.createPortal(tooltip, portalRoot) : null;
+    var tooltipInPortal = portalRoot ? reactDom.createPortal(tooltip, portalRoot) : null;
     return {
         targetRef: setTargetElement,
         tooltip: tooltipInPortal !== null && tooltipInPortal !== void 0 ? tooltipInPortal : tooltip,
@@ -4421,27 +4420,6 @@ var UserBlock = function (_a) {
 var Flex = styled__default['default'].div(templateObject_1$9 || (templateObject_1$9 = __makeTemplateObject(["\n  display: flex;\n  ", "\n  ", "\n"], ["\n  display: flex;\n  ", "\n  ", "\n"])), styledSystem.flexbox, styledSystem.space);
 var templateObject_1$9;
 
-var createReactClass = require('create-react-class');
-var CryptoTicker = createReactClass({
-    constructor: function () {
-        // create a ref to store the textInput DOM element
-        this.coins = React__default['default'].createRef();
-    },
-    componentDidMount: function () {
-        ReactDOM__default['default'].findDOMNode;
-        this.coins.getDOMNode().setAttribute('coins', '1,1027,825,2010,5426,52,7083,6758,3718,1839,2087,8497,7278,10787,9082,10746,7288,1727,5692,6538,2,2083,74,5994,3890,6859,4943,3408,1697,2588,8757,8104,9377,7791');
-        this.coins.getDOMNode().setAttribute('currency', 'USD');
-        this.coins.getDOMNode().setAttribute('theme', 'dark');
-        this.coins.getDOMNode().setAttribute('transparent', 'true');
-        this.coins.getDOMNode().setAttribute('show-symbol-logo', 'true');
-    },
-    render: function () {
-        return React__default['default'].createElement(React__default['default'].Fragment, null,
-            React__default['default'].createElement("script", { type: "text/javascript", src: "https://files.coinmarketcap.com/static/widget/coinMarquee.js" }),
-            React__default['default'].createElement("div", { ref: this.coins, id: "coinmarketcap-widget-marquee" }));
-    }
-});
-
 var PriceLink$1 = styled__default['default'].a(templateObject_1$8 || (templateObject_1$8 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
 var VChipPrice = function (_a) {
     var vchipPriceUsd = _a.vchipPriceUsd, isDark = _a.isDark;
@@ -4532,7 +4510,6 @@ var Menu$1 = function (_a) {
     return (React__default['default'].createElement(Wrapper, null,
         React__default['default'].createElement(StyledNav, { showMenu: showMenu },
             React__default['default'].createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
-            React__default['default'].createElement(CryptoTicker, null),
             React__default['default'].createElement(VXCPrice$1, { vxcPriceUsd: vxcPriceUsd, isDark: isDark }),
             React__default['default'].createElement(VChipPrice$1, { vchipPriceUsd: vchipPriceUsd, isDark: isDark }),
             React__default['default'].createElement(BankPrice$1, { bankPriceUsd: bankPriceUsd, isDark: isDark }),

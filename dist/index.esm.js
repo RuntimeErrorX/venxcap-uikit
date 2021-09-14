@@ -6,7 +6,7 @@ import uniqueId from 'lodash/uniqueId';
 import { uniqueId as uniqueId$1 } from 'lodash';
 import noop from 'lodash/noop';
 import debounce from 'lodash/debounce';
-import ReactDOM, { createPortal } from 'react-dom';
+import { createPortal } from 'react-dom';
 import { usePopper } from 'react-popper';
 import throttle from 'lodash/throttle';
 import { Link as Link$1, NavLink, useLocation } from 'react-router-dom';
@@ -4406,27 +4406,6 @@ var UserBlock = function (_a) {
 var Flex = styled.div(templateObject_1$9 || (templateObject_1$9 = __makeTemplateObject(["\n  display: flex;\n  ", "\n  ", "\n"], ["\n  display: flex;\n  ", "\n  ", "\n"])), flexbox, space);
 var templateObject_1$9;
 
-var createReactClass = require('create-react-class');
-var CryptoTicker = createReactClass({
-    constructor: function () {
-        // create a ref to store the textInput DOM element
-        this.coins = React.createRef();
-    },
-    componentDidMount: function () {
-        ReactDOM.findDOMNode;
-        this.coins.getDOMNode().setAttribute('coins', '1,1027,825,2010,5426,52,7083,6758,3718,1839,2087,8497,7278,10787,9082,10746,7288,1727,5692,6538,2,2083,74,5994,3890,6859,4943,3408,1697,2588,8757,8104,9377,7791');
-        this.coins.getDOMNode().setAttribute('currency', 'USD');
-        this.coins.getDOMNode().setAttribute('theme', 'dark');
-        this.coins.getDOMNode().setAttribute('transparent', 'true');
-        this.coins.getDOMNode().setAttribute('show-symbol-logo', 'true');
-    },
-    render: function () {
-        return React.createElement(React.Fragment, null,
-            React.createElement("script", { type: "text/javascript", src: "https://files.coinmarketcap.com/static/widget/coinMarquee.js" }),
-            React.createElement("div", { ref: this.coins, id: "coinmarketcap-widget-marquee" }));
-    }
-});
-
 var PriceLink$1 = styled.a(templateObject_1$8 || (templateObject_1$8 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
 var VChipPrice = function (_a) {
     var vchipPriceUsd = _a.vchipPriceUsd, isDark = _a.isDark;
@@ -4517,7 +4496,6 @@ var Menu$1 = function (_a) {
     return (React.createElement(Wrapper, null,
         React.createElement(StyledNav, { showMenu: showMenu },
             React.createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
-            React.createElement(CryptoTicker, null),
             React.createElement(VXCPrice$1, { vxcPriceUsd: vxcPriceUsd, isDark: isDark }),
             React.createElement(VChipPrice$1, { vchipPriceUsd: vchipPriceUsd, isDark: isDark }),
             React.createElement(BankPrice$1, { bankPriceUsd: bankPriceUsd, isDark: isDark }),

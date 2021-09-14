@@ -132,7 +132,7 @@ const Menu: React.FC<NavProps> = ({
                 <coingecko-coin-price-marquee-widget coin-ids="bitcoin,ethereum,chainlink,pancakeswap-token,dai,binance-usd,cardano,wbnb,sidekick-token" currency="usd" background-color="#111417" locale="en" font-color="#ffffff" vce-ready=""></coingecko-coin-price-marquee-widget>
             </ul>
         </nav> */}
-        <CryptoTicker />
+        {/* <CryptoTicker /> */}
         <VXCPrice vxcPriceUsd={vxcPriceUsd} isDark={isDark} />
         <VChipPrice vchipPriceUsd={vchipPriceUsd} isDark={isDark} />
         <BankPrice bankPriceUsd={bankPriceUsd} isDark={isDark} />
