@@ -4179,7 +4179,7 @@ var StyledPanel = styled__default['default'].div(templateObject_1$d || (template
     return (showMenu ? "7px" : "0px");
 }, function (_a) {
     var showMenu = _a.showMenu;
-    return (showMenu ? "110px" : "105px");
+    return (showMenu ? "108px" : "103px");
 }, function (_a) {
     var theme = _a.theme;
     return theme.nav.background;
