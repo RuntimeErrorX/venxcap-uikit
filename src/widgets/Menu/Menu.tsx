@@ -23,12 +23,12 @@ const Wrapper = styled.div`
 // transition: top 0.2s;-${MENU_HEIGHT}
   // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   // height: ${MENU_HEIGHT}px;
+  // padding-bottom: ${({ showMenu }) => (showMenu ? `7px` : `3px`)};
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
   transition: top 0.21s;
-  padding-top: ${({ showMenu }) => (showMenu ? `70px` : `63px`)};
+  padding-top: ${({ showMenu }) => (showMenu ? `75px` : `68px`)};
   transition: padding-top 0.2s;
-  padding-bottom: ${({ showMenu }) => (showMenu ? `7px` : `3px`)};
   left: 0;
   display: flex;
   justify-content: space-between;
