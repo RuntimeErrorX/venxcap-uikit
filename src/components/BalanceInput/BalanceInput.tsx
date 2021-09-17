@@ -12,6 +12,8 @@ const BalanceInput: React.FC<BalanceInputProps> = ({
   innerRef,
   isWarning = false,
   decimals = 18,
+  unit,
+  switchEditingUnits,
   ...props
 }) => {
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
