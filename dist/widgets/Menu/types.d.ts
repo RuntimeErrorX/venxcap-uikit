@@ -58,6 +58,9 @@ export interface NavProps extends PanelProps {
     account?: string;
     login: Login;
     profile?: Profile;
+    vxcPriceUsd?: number;
+    vchipPriceUsd?: number;
+    bankPriceUsd?: number;
     links: Array<MenuItemsType>;
     subLinks: Array<SubMenuItemsType>;
     footerLinks: Array<FooterLinkType>;

@@ -36,7 +36,7 @@ const MenuItem: React.FC<FooterProps> = ({
 }) => {
 const theme = useTheme();
   return (
-    <StyledFooter p={["40px 16px", null, "56px 40px 32px 40px"]} {...props} justifyContent="center">
+    <StyledFooter p={["40px 16px", null, "56px 40px 55px 40px"]} {...props} justifyContent="center">
       <Flex flexDirection="column" width={["100%", null, "1200px;"]}>
         <StyledIconMobileContainer display={["block", null, "none"]}>
           <VenetianXRoundSml isDark width="40px" />
@@ -88,7 +88,11 @@ const theme = useTheme();
           <Flex order={[1, null, 2]} mb={["42px", null, "0"]} justifyContent="space-between" alignItems="center">
             <Box mr="36px">
               <VXCPrice vxcPriceUsd={vxcPriceUsd} color={darkColors.textSubtle as keyof Colors} />
+            </Box>
+            <Box mr="36px">
               <VChipPrice vchipPriceUsd={vchipPriceUsd} color={darkColors.textSubtle as keyof Colors} />
+            </Box>
+            <Box mr="36px">
               <BankPrice bankPriceUsd={bankPriceUsd} color={darkColors.textSubtle as keyof Colors} />
             </Box>
             <Button

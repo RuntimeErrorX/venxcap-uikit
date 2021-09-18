@@ -6,7 +6,7 @@ import BottomNav from "../../components/BottomNav";
 import throttle from "lodash/throttle";
 import Overlay from "../../components/Overlay/Overlay";
 import { useMatchBreakpoints } from "../../hooks";
-import Logo from "./components/Logo";
+import Logo from "./../Menu/icons/Logo"
 import { Flex } from "../../components/Flex";
 import Footer from "../../components/Footer";
 import MenuItems from "../../components/MenuItems/MenuItems";
@@ -14,9 +14,10 @@ import SubMenuItems from "../../components/SubMenuItems";
 import VXCPrice from "./components/VXCPrice"
 import VChipPrice from "./components/VChipPrice"
 import BankPrice from "./../Menu/components/BankPrice"
+import UserBlock from "./UserBlock";
 // import Avatar from "./Avatar";
-import { NavProps, TNavProps } from "./types";
-import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL, MOBILE_MENU_HEIGHT } from "./config";
+import { NavProps } from "./types";
+import { MENU_HEIGHT, MOBILE_MENU_HEIGHT } from "./config";
 import LangSelector from "../../components/LangSelector/LangSelector";
 
 const Wrapper = styled.div`
@@ -28,21 +29,24 @@ const Wrapper = styled.div`
   // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   // height: ${MENU_HEIGHT}px;
   // padding-bottom: ${({ showMenu }) => (showMenu ? `7px` : `3px`)};
+
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
-  transition: top 0.21s;
-  padding-top: ${({ showMenu }) => (showMenu ? `67px` : `63px`)};
-  transition: padding-top 0.2s;
+  top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
   left: 0;
+  transition: top 0.2s;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 8px;
-  padding-right: 16px;
   width: 100%;
+  height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.background};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   z-index: 20;
   transform: translate3d(0, 0, 0);
+
+  padding-left: 16px;
+  padding-right: 16px;
 `;
 
 const BodyWrapper = styled.div`
@@ -50,16 +54,12 @@ const BodyWrapper = styled.div`
   display: flex;
 `;
 // ${MENU_HEIGHT} - belo 0px
-const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
-  flex-grow: 1;
-  margin-top: ${({ showMenu }) => (showMenu ? `0px` : 0)};
-  transition: margin-left 0.2s
-  max-width: 100%;
 
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
-  }
+const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
+flex-grow: 1;
+transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+transform: translate3d(0, 0, 0);
+max-width: 100%;
 `;
 
 const MobileOnlyOverlay = styled(Overlay)`
@@ -92,9 +92,7 @@ const Menu: React.FC<NavProps> = ({
   buyVXCLabel,
   children,
 }) => {
-  const { isXl } = useMatchBreakpoints();
-  const isMobile = isXl === false;
-  const [isPushed, setIsPushed] = useState(!isMobile);
+  const { isMobile } = useMatchBreakpoints();
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(window.pageYOffset);
   const theme = useTheme();
@@ -140,11 +138,15 @@ const Menu: React.FC<NavProps> = ({
       </Flex>
       <Flex alignItems="center">
         {!isMobile && (
-          <Box mr="36px">
-            <VXCPrice vxcPriceUsd={vxcPriceUsd} isDark={theme.isDark} />
-            <VChipPrice vchipPriceUsd={vchipPriceUsd} isDark={theme.isDark} />
-            <BankPrice bankPriceUsd={bankPriceUsd} isDark={theme.isDark} />
-          </Box>
+          <>
+            <Box mr="36px">
+              <VXCPrice vxcPriceUsd={vxcPriceUsd} isDark={theme.isDark} />
+            </Box><Box mr="36px">
+              <VChipPrice vchipPriceUsd={vchipPriceUsd} isDark={theme.isDark} />
+            </Box><Box mr="36px">
+              <BankPrice bankPriceUsd={bankPriceUsd} isDark={theme.isDark} />
+            </Box>
+          </>
         )}
         <Box mt="4px">
           <LangSelector
@@ -156,6 +158,10 @@ const Menu: React.FC<NavProps> = ({
             hideLanguage
           />
         </Box>
+        <Flex>
+          <UserBlock account={account} login={login} logout={logout} />
+          {/* {profile && <Avatar profile={profile} />} */}
+        </Flex>
         {/* {globalMenu} {userMenu} */}
       </Flex>
     </StyledNav>

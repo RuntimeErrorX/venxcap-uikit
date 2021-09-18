@@ -69,6 +69,9 @@ export interface NavProps extends PanelProps {
   profile?: Profile;
   // userMenu?: ReactElement;
   // globalMenu?: ReactElement;
+  vxcPriceUsd?: number;
+  vchipPriceUsd?: number;
+  bankPriceUsd?: number;
   links: Array<MenuItemsType>;
   subLinks: Array<SubMenuItemsType>;
   footerLinks: Array<FooterLinkType>;
