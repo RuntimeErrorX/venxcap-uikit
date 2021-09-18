@@ -17,7 +17,7 @@ import VXCPrice from "../VXCPrice/VXCPrice";
 import VChipPrice from "../VChipPrice/VChipPrice";
 import BankPrice from "../BankPrice/BankPrice";
 import { useTheme } from "styled-components";
-import { VenetianXRoundSml, ArrowForwardIcon } from "../Svg";
+import { VenetianXRound, ArrowForwardIcon } from "../Svg";
 import { Button } from "../Button";
 import { Colors } from "../..";
 
@@ -39,7 +39,7 @@ const theme = useTheme();
     <StyledFooter p={["40px 16px", null, "56px 40px 55px 40px"]} {...props} justifyContent="center">
       <Flex flexDirection="column" width={["100%", null, "1200px;"]}>
         <StyledIconMobileContainer display={["block", null, "none"]}>
-          <VenetianXRoundSml isDark width="40px" />
+          <VenetianXRound isDark width="40px" />
         </StyledIconMobileContainer>
         <Flex
           order={[2, null, 1]}
@@ -66,7 +66,7 @@ const theme = useTheme();
             </StyledList>
           ))}
           <Box display={["none", null, "block"]}>
-            <VenetianXRoundSml isDark width="40px" />
+            <VenetianXRound isDark width="40px" />
           </Box>
         </Flex>
         <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />

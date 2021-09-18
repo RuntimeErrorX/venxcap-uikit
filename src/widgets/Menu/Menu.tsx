@@ -32,9 +32,10 @@ const Wrapper = styled.div`
 
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
-  top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
+  transition: top 0.21s;
+  padding-top: ${({ showMenu }) => (showMenu ? `67px` : `63px`)};
+  transition: padding-top 0.2s;
   left: 0;
-  transition: top 0.2s;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,10 +57,11 @@ const BodyWrapper = styled.div`
 // ${MENU_HEIGHT} - belo 0px
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
-flex-grow: 1;
-transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-transform: translate3d(0, 0, 0);
-max-width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  flex-grow: 1;
+  max-width: 100%;
 `;
 
 const MobileOnlyOverlay = styled(Overlay)`
