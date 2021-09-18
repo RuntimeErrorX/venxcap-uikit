@@ -140,7 +140,7 @@ const Menu: React.FC<NavProps> = ({
       </Flex>
       <Flex alignItems="center">
         {!isMobile && (
-          <Box mr="12px">
+          <Box mr="36px">
             <VXCPrice vxcPriceUsd={vxcPriceUsd} isDark={theme.isDark} />
             <VChipPrice vchipPriceUsd={vchipPriceUsd} isDark={theme.isDark} />
             <BankPrice bankPriceUsd={bankPriceUsd} isDark={theme.isDark} />

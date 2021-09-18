@@ -17,7 +17,7 @@ import VXCPrice from "../VXCPrice/VXCPrice";
 import VChipPrice from "../VChipPrice/VChipPrice";
 import BankPrice from "../BankPrice/BankPrice";
 import { useTheme } from "styled-components";
-import { VenetianXRound, ArrowForwardIcon } from "../Svg";
+import { VenetianXRoundSml, ArrowForwardIcon } from "../Svg";
 import { Button } from "../Button";
 import { Colors } from "../..";
 
@@ -39,7 +39,7 @@ const theme = useTheme();
     <StyledFooter p={["40px 16px", null, "56px 40px 32px 40px"]} {...props} justifyContent="center">
       <Flex flexDirection="column" width={["100%", null, "1200px;"]}>
         <StyledIconMobileContainer display={["block", null, "none"]}>
-          <VenetianXRound isDark width="130px" />
+          <VenetianXRoundSml isDark width="40px" />
         </StyledIconMobileContainer>
         <Flex
           order={[2, null, 1]}
@@ -66,7 +66,7 @@ const theme = useTheme();
             </StyledList>
           ))}
           <Box display={["none", null, "block"]}>
-            <VenetianXRound isDark width="160px" />
+            <VenetianXRoundSml isDark width="40px" />
           </Box>
         </Flex>
         <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />
@@ -85,8 +85,8 @@ const theme = useTheme();
               dropdownPosition="top-right"
             />
           </Flex>
-          <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
-            <Box mr="20px">
+          <Flex order={[1, null, 2]} mb={["42px", null, "0"]} justifyContent="space-between" alignItems="center">
+            <Box mr="36px">
               <VXCPrice vxcPriceUsd={vxcPriceUsd} color={darkColors.textSubtle as keyof Colors} />
               <VChipPrice vchipPriceUsd={vchipPriceUsd} color={darkColors.textSubtle as keyof Colors} />
               <BankPrice bankPriceUsd={bankPriceUsd} color={darkColors.textSubtle as keyof Colors} />
