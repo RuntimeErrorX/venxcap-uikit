@@ -4101,7 +4101,7 @@ var SocialLinks = function (_a) {
 };
 var SocialLinks$1 = React__default['default'].memo(SocialLinks, function () { return true; });
 
-var StyledFooter = styled__default['default'](Flex$1)(templateObject_1$j || (templateObject_1$j = __makeTemplateObject(["\n  background: ", ";\n"], ["\n  background: ", ";\n"])), darkColors.backgroundAlt);
+var StyledFooter = styled__default['default'](Flex$1)(templateObject_1$j || (templateObject_1$j = __makeTemplateObject(["\n  position: fixed;\n  bottom:0;\n  left:0;\n  background: ", ";\n"], ["\n  position: fixed;\n  bottom:0;\n  left:0;\n  background: ", ";\n"])), darkColors.backgroundAlt);
 var StyledList = styled__default['default'].ul(templateObject_2$6 || (templateObject_2$6 = __makeTemplateObject(["\n  list-style: none;\n  margin-bottom: 40px;\n\n  ", " {\n    margin-bottom: 0px;\n  }\n"], ["\n  list-style: none;\n  margin-bottom: 40px;\n\n  ", " {\n    margin-bottom: 0px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.md;
@@ -4720,7 +4720,7 @@ var StyledNav = styled__default['default'].nav(templateObject_2$3 || (templateOb
 });
 var BodyWrapper = styled__default['default'].div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
 // ${MENU_HEIGHT} - belo 0px
-var Inner = styled__default['default'].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  flex-grow: 1;\n  max-width: 100%;\n"], ["\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  flex-grow: 1;\n  max-width: 100%;\n"])));
+var Inner = styled__default['default'].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  flex-grow: 1;\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n"], ["\n  flex-grow: 1;\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n"])));
 styled__default['default'](Overlay)(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"], ["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;

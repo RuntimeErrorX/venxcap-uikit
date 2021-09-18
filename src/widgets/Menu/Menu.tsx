@@ -57,10 +57,9 @@ const BodyWrapper = styled.div`
 // ${MENU_HEIGHT} - belo 0px
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
-  position: fixed;
-  left: 0;
-  bottom: 0;
   flex-grow: 1;
+  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate3d(0, 0, 0);
   max-width: 100%;
 `;
 
