@@ -22,7 +22,7 @@ const Container = styled.div`
   height: 100%;
 `;
 
-const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
+const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, linkSide }) => {
   const location = useLocation();
 
   // Close the menu when a user clicks a link on mobile
@@ -30,7 +30,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
 
   return (
     <Container>
-      {links.map((entry) => {
+      {linkSide.map((entry) => {
         const Icon = Icons[entry.icon];
         const iconElement = <Icon width="24px" mr="8px" />;
         const calloutClass = entry.calloutClass ? entry.calloutClass : undefined;

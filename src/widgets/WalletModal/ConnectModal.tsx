@@ -16,6 +16,7 @@ interface Props {
   login: Login;
   onDismiss?: () => void;
   displayCount?: number;
+  t: (key: string) => string;
 }
 
 const WalletWrapper = styled(Box)`

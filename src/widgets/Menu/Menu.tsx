@@ -1,19 +1,23 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useTheme } from "styled-components";
 import styled from "styled-components";
+import { Box } from "../../components/Box";
+import BottomNav from "../../components/BottomNav";
 import throttle from "lodash/throttle";
 import Overlay from "../../components/Overlay/Overlay";
 import { useMatchBreakpoints } from "../../hooks";
 import Logo from "./components/Logo";
-import Panel from "./components/Panel";
-import UserBlock from "./UserBlock";
 import { Flex } from "../../components/Flex";
-import CryptoTicker from "../Menu/components/Ticker"
+import Footer from "../../components/Footer";
+import MenuItems from "../../components/MenuItems/MenuItems";
+import SubMenuItems from "../../components/SubMenuItems";
 import VXCPrice from "./components/VXCPrice"
 import VChipPrice from "./components/VChipPrice"
 import BankPrice from "./../Menu/components/BankPrice"
 // import Avatar from "./Avatar";
-import { NavProps } from "./types";
-import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
+import { NavProps, TNavProps } from "./types";
+import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL, MOBILE_MENU_HEIGHT } from "./config";
+import LangSelector from "../../components/LangSelector/LangSelector";
 
 const Wrapper = styled.div`
   position: relative;
@@ -73,13 +77,19 @@ const Menu: React.FC<NavProps> = ({
   logout,
   isDark,
   toggleTheme,
-  langs,
-  setLang,
   currentLang,
+  setLang,
   vxcPriceUsd,
   vchipPriceUsd,
   bankPriceUsd,
+  // spotLightPriceUsd,
   links,
+  subLinks,
+  footerLinks,
+  activeItem,
+  activeSubItem,
+  langs,
+  buyVXCLabel,
   children,
 }) => {
   const { isXl } = useMatchBreakpoints();
@@ -87,6 +97,7 @@ const Menu: React.FC<NavProps> = ({
   const [isPushed, setIsPushed] = useState(!isMobile);
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(window.pageYOffset);
+  const theme = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -122,30 +133,53 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
-      <StyledNav showMenu={showMenu}>
-        <Logo
-          isPushed={isPushed}
-          togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
-          isDark={isDark}
-          href={homeLink?.href ?? "/"}
-        />
-        {/* <nav className="navbar navbar-fixed-bottom">
-            <ul className="navbar-nav ml-auto mr-auto">
-                <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
-                <coingecko-coin-price-marquee-widget coin-ids="bitcoin,ethereum,chainlink,pancakeswap-token,dai,binance-usd,cardano,wbnb,sidekick-token" currency="usd" background-color="#111417" locale="en" font-color="#ffffff" vce-ready=""></coingecko-coin-price-marquee-widget>
-            </ul>
-        </nav> */}
-        {/* <CryptoTicker /> */}
-        <VXCPrice vxcPriceUsd={vxcPriceUsd} isDark={isDark} />
-        <VChipPrice vchipPriceUsd={vchipPriceUsd} isDark={isDark} />
-        <BankPrice bankPriceUsd={bankPriceUsd} isDark={isDark} />
-        {/* {userMenu} */}
-        <Flex>
-          <UserBlock account={account} login={login} logout={logout} />
-          {/* {profile && <Avatar profile={profile} />} */}
-        </Flex>
-      </StyledNav>
+    <StyledNav showMenu={showMenu}>
+      <Flex>
+        <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
+        {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
+      </Flex>
+      <Flex alignItems="center">
+        {!isMobile && (
+          <Box mr="12px">
+            <VXCPrice vxcPriceUsd={vxcPriceUsd} isDark={theme.isDark} />
+            <VChipPrice vchipPriceUsd={vchipPriceUsd} isDark={theme.isDark} />
+            <BankPrice bankPriceUsd={bankPriceUsd} isDark={theme.isDark} />
+          </Box>
+        )}
+        <Box mt="4px">
+          <LangSelector
+            currentLang={currentLang}
+            langs={langs}
+            setLang={setLang}
+            buttonScale="xs"
+            color="textSubtle"
+            hideLanguage
+          />
+        </Box>
+        {/* {globalMenu} {userMenu} */}
+      </Flex>
+    </StyledNav>
+      {subLinks && <SubMenuItems items={subLinks} mt={`${MENU_HEIGHT + 1}px`} activeItem={activeSubItem} />}
       <BodyWrapper>
+        <Inner isPushed={false} showMenu={showMenu}>
+          {children}
+          <Footer
+            items={footerLinks}
+            isDark={isDark}
+            toggleTheme={toggleTheme}
+            langs={langs}
+            setLang={setLang}
+            currentLang={currentLang}
+            vxcPriceUsd={vxcPriceUsd}
+            vchipPriceUsd={vchipPriceUsd}
+            bankPriceUsd={bankPriceUsd}
+            buyVXCLabel={buyVXCLabel}
+            mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
+          />
+        </Inner>
+      </BodyWrapper>
+      {isMobile && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />}
+      {/* <BodyWrapper>
         <Panel
           isPushed={isPushed}
           isMobile={isMobile}
@@ -157,13 +191,12 @@ const Menu: React.FC<NavProps> = ({
           currentLang={currentLang}
           vxcPriceUsd={vxcPriceUsd}
           pushNav={setIsPushed}
-          links={links}
         />
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
         </Inner>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
-      </BodyWrapper>
+      </BodyWrapper> */}
     </Wrapper>
   );
 };

@@ -13,6 +13,9 @@ export const baseColors = {
 export const additionalColors = {
   binance: "#F0B90B",
   overlay: "#7a2a2a",
+  gold: "#FFC700",
+  silver: "#B2B2B2",
+  bronze: "#E7974D",
 };
 
 export const lightColors: Colors = {
@@ -25,6 +28,7 @@ export const lightColors: Colors = {
   background: "#F2E8DF",
   backgroundDisabled: "#F2E8DF",
   backgroundAlt: "#FFFFFF",
+  backgroundAlt2: "rgba(255, 255, 255, 0.7)",
   cardBorder: "#E7E3EB",
   contrast: "#261313",
   invertedContrast: "#F2BC79",
@@ -58,6 +62,7 @@ export const darkColors: Colors = {
   background: "#313235", // "#343135",
   backgroundDisabled: "#2c2626",
   backgroundAlt: "#070c12", // 27262c
+  backgroundAlt2: "rgba(39, 38, 44, 0.7)",
   cardBorder: "#323e41",
   contrast: "#FFFFFF",
   dropdown: "#1E1D20",

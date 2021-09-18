@@ -1,3 +1,5 @@
-import { NavTheme } from "./types";
-export declare const light: NavTheme;
-export declare const dark: NavTheme;
+export interface NavThemeType {
+    background: string;
+}
+export declare const light: NavThemeType;
+export declare const dark: NavThemeType;
