@@ -4,7 +4,6 @@ import { Box, Flex } from "../Box";
 import SocialLinks from "./Components/SocialLinks";
 
 export const StyledFooter = styled(Flex)`
-  position: fixed;
   bottom:0;
   left:0;
   background: ${darkColors.backgroundAlt};

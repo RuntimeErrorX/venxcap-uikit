@@ -4101,7 +4101,7 @@ var SocialLinks = function (_a) {
 };
 var SocialLinks$1 = React__default['default'].memo(SocialLinks, function () { return true; });
 
-var StyledFooter = styled__default['default'](Flex$1)(templateObject_1$j || (templateObject_1$j = __makeTemplateObject(["\n  position: fixed;\n  bottom:0;\n  left:0;\n  background: ", ";\n"], ["\n  position: fixed;\n  bottom:0;\n  left:0;\n  background: ", ";\n"])), darkColors.backgroundAlt);
+var StyledFooter = styled__default['default'](Flex$1)(templateObject_1$j || (templateObject_1$j = __makeTemplateObject(["\n  bottom:0;\n  left:0;\n  background: ", ";\n"], ["\n  bottom:0;\n  left:0;\n  background: ", ";\n"])), darkColors.backgroundAlt);
 var StyledList = styled__default['default'].ul(templateObject_2$6 || (templateObject_2$6 = __makeTemplateObject(["\n  list-style: none;\n  margin-bottom: 40px;\n\n  ", " {\n    margin-bottom: 0px;\n  }\n"], ["\n  list-style: none;\n  margin-bottom: 40px;\n\n  ", " {\n    margin-bottom: 0px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.md;
@@ -4508,9 +4508,15 @@ var useWalletModal = function (login, logout, t, account) {
     return { onPresentConnectModal: onPresentConnectModal, onPresentAccountModal: onPresentAccountModal };
 };
 
+var useWalletModalV1 = function (login, logout, t, account) {
+    var onPresentConnectModal = useModal(React__default['default'].createElement(ConnectModal, { login: login, t: t }))[0];
+    var onPresentAccountModal = useModal(React__default['default'].createElement(AccountModal, { account: account || "", logout: logout, t: t }))[0];
+    return { onPresentConnectModal: onPresentConnectModal, onPresentAccountModal: onPresentAccountModal };
+};
+
 var UserBlock = function (_a) {
     var account = _a.account, login = _a.login, logout = _a.logout;
-    var _b = useWalletModal(login, logout, account), onPresentConnectModal = _b.onPresentConnectModal, onPresentAccountModal = _b.onPresentAccountModal;
+    var _b = useWalletModalV1(login, logout, account), onPresentConnectModal = _b.onPresentConnectModal, onPresentAccountModal = _b.onPresentAccountModal;
     var accountEllipsis = account ? account.substring(0, 4) + "..." + account.substring(account.length - 4) : null;
     return (React__default['default'].createElement("div", null, account ? (React__default['default'].createElement(Button, { size: "sm", variant: "tertiary", onClick: function () {
             onPresentAccountModal();
@@ -4710,7 +4716,7 @@ var Wrapper = styled__default['default'].div(templateObject_1$6 || (templateObje
 // padding-bottom: ${({ showMenu }) => (showMenu ? `7px` : `3px`)};
 var StyledNav = styled__default['default'].nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  position: fixed;\n  transition: top 0.21s;\n  padding-top: ", ";\n  transition: padding-top 0.2s;\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"], ["\n  position: fixed;\n  transition: top 0.21s;\n  padding-top: ", ";\n  transition: padding-top 0.2s;\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"])), function (_a) {
     var showMenu = _a.showMenu;
-    return (showMenu ? "67px" : "63px");
+    return (showMenu ? "80px" : "80px");
 }, MENU_HEIGHT, function (_a) {
     var theme = _a.theme;
     return theme.nav.background;
@@ -5219,3 +5225,4 @@ exports.useParticleBurst = useParticleBurst;
 exports.useTable = useTable;
 exports.useTooltip = useTooltip;
 exports.useWalletModal = useWalletModal;
+exports.useWalletModalV1 = useWalletModalV1;
