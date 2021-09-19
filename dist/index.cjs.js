@@ -4488,29 +4488,31 @@ var CopyToClipboard = function (_a) {
 var templateObject_1$7, templateObject_2$4;
 
 var AccountModal = function (_a) {
-    var account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b, t = _a.t;
-    return (React__default['default'].createElement(Modal, { title: t("Your wallet"), onDismiss: onDismiss },
+    var account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
+    return (React__default['default'].createElement(Modal, { title: "Your wallet", onDismiss: onDismiss },
         React__default['default'].createElement(Text, { fontSize: "20px", bold: true, style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" } }, account),
         React__default['default'].createElement(Flex$1, { mb: "32px" },
-            React__default['default'].createElement(LinkExternal, { small: true, href: "https://bscscan.com/address/" + account, mr: "16px" }, t("View on BscScan")),
-            React__default['default'].createElement(CopyToClipboard, { toCopy: account }, t("Copy Address"))),
+            React__default['default'].createElement(LinkExternal, { small: true, href: "https://bscscan.com/address/" + account, mr: "16px" }, "View on BscScan"),
+            React__default['default'].createElement(CopyToClipboard, { toCopy: account }, "Copy Address")),
         React__default['default'].createElement(Flex$1, { justifyContent: "center" },
             React__default['default'].createElement(Button, { scale: "sm", variant: "secondary", onClick: function () {
                     logout();
                     window.localStorage.removeItem(connectorLocalStorageKey);
                     onDismiss();
-                } }, t("Logout")))));
+                } }, "Logout"))));
 };
 
 var useWalletModal = function (login, logout, t, account) {
-    var onPresentConnectModal = useModal(React__default['default'].createElement(ConnectModal, { login: login, t: t }))[0];
-    var onPresentAccountModal = useModal(React__default['default'].createElement(AccountModal, { account: account || "", logout: logout, t: t }))[0];
+    var onPresentConnectModal = useModal(React__default['default'].createElement(ConnectModal, { login: login }))[0];
+    var onPresentAccountModal = useModal(React__default['default'].createElement(AccountModal, { account: account || "", logout: logout }))[0];
+    // const [onPresentConnectModal] = useModal(<ConnectModal login={login} t={t} />);
+    // const [onPresentAccountModal] = useModal(<AccountModal account={account || ""} logout={logout} t={t} />);
     return { onPresentConnectModal: onPresentConnectModal, onPresentAccountModal: onPresentAccountModal };
 };
 
-var useWalletModalV1 = function (login, logout, t, account) {
-    var onPresentConnectModal = useModal(React__default['default'].createElement(ConnectModal, { login: login, t: t }))[0];
-    var onPresentAccountModal = useModal(React__default['default'].createElement(AccountModal, { account: account || "", logout: logout, t: t }))[0];
+var useWalletModalV1 = function (login, logout, account) {
+    var onPresentConnectModal = useModal(React__default['default'].createElement(ConnectModal, { login: login }))[0];
+    var onPresentAccountModal = useModal(React__default['default'].createElement(AccountModal, { account: account || "", logout: logout }))[0];
     return { onPresentConnectModal: onPresentConnectModal, onPresentAccountModal: onPresentAccountModal };
 };
 
