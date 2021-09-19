@@ -4198,7 +4198,7 @@ var MenuItem$1 = function (_a) {
                         })));
                 }),
                 React__default['default'].createElement(Box, { display: ["none", null, "block"] },
-                    React__default['default'].createElement(VenetianXRound$1, { isDark: true, width: "40px" }))),
+                    React__default['default'].createElement(VenetianXRound$1, { isDark: true, width: "90px" }))),
             React__default['default'].createElement(StyledSocialLinks, { order: [2], pb: ["42px", null, "32px"], mb: ["0", null, "32px"] }),
             React__default['default'].createElement(StyledToolsContainer, { order: [1, null, 3], flexDirection: ["column", null, "row"], justifyContent: "space-between" },
                 React__default['default'].createElement(Flex$1, { order: [2, null, 1], alignItems: "center" },
@@ -4716,8 +4716,8 @@ var Wrapper = styled__default['default'].div(templateObject_1$6 || (templateObje
 // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
 // height: ${MENU_HEIGHT}px;
 // padding-bottom: ${({ showMenu }) => (showMenu ? `7px` : `3px`)};
-// ${MENU_HEIGHT}px;
-var StyledNav = styled__default['default'].nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  position: fixed;\n  transition: top 0.21s;\n  padding-top: ", ";\n  transition: padding-top 0.2s;\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: 0px; \n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"], ["\n  position: fixed;\n  transition: top 0.21s;\n  padding-top: ", ";\n  transition: padding-top 0.2s;\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: 0px; \n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"])), function (_a) {
+// ${MENU_HEIGHT}px;height: 0px; 
+var StyledNav = styled__default['default'].nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  position: fixed;\n  transition: top 0.21s;\n  padding-top: ", ";\n  transition: padding-top 0.2s;\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"], ["\n  position: fixed;\n  transition: top 0.21s;\n  padding-top: ", ";\n  transition: padding-top 0.2s;\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? "62px" : "62px");
 }, function (_a) {

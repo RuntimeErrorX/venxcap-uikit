@@ -66,7 +66,7 @@ const theme = useTheme();
             </StyledList>
           ))}
           <Box display={["none", null, "block"]}>
-            <VenetianXRound isDark width="40px" />
+            <VenetianXRound isDark width="90px" />
           </Box>
         </Flex>
         <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />

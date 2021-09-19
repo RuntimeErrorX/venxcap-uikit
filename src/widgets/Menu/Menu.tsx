@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
 // height: ${MENU_HEIGHT}px;
 // padding-bottom: ${({ showMenu }) => (showMenu ? `7px` : `3px`)};
-// ${MENU_HEIGHT}px;
+// ${MENU_HEIGHT}px;height: 0px; 
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
   transition: top 0.21s;
@@ -40,7 +40,6 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 0px; 
   background-color: ${({ theme }) => theme.nav.background};
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   z-index: 20;
