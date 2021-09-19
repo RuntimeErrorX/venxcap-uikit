@@ -4168,7 +4168,7 @@ var templateObject_1$f;
 var MenuItem$1 = function (_a) {
     var items = _a.items, isDark = _a.isDark, toggleTheme = _a.toggleTheme, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, vxcPriceUsd = _a.vxcPriceUsd, vchipPriceUsd = _a.vchipPriceUsd, bankPriceUsd = _a.bankPriceUsd, buyVXCLabel = _a.buyVXCLabel, props = __rest(_a, ["items", "isDark", "toggleTheme", "currentLang", "langs", "setLang", "vxcPriceUsd", "vchipPriceUsd", "bankPriceUsd", "buyVXCLabel"]);
     useTheme();
-    return (React.createElement(StyledFooter, __assign({ p: ["40px 16px", null, "56px 40px 55px 40px"] }, props, { justifyContent: "center" }),
+    return (React.createElement(StyledFooter, __assign({ p: ["40px 16px", null, "56px 40px 32px 40px"] }, props, { justifyContent: "center" }),
         React.createElement(Flex$1, { flexDirection: "column", width: ["100%", null, "1200px;"] },
             React.createElement(StyledIconMobileContainer, { display: ["block", null, "none"] },
                 React.createElement(VenetianXRound$1, { isDark: true, width: "130px" })),
@@ -4184,20 +4184,18 @@ var MenuItem$1 = function (_a) {
                         })));
                 }),
                 React.createElement(Box, { display: ["none", null, "block"] },
-                    React.createElement(VenetianXRound$1, { isDark: true, width: "90px" }))),
+                    React.createElement(VenetianXRound$1, { isDark: true, width: "160px" }))),
             React.createElement(StyledSocialLinks, { order: [2], pb: ["42px", null, "32px"], mb: ["0", null, "32px"] }),
             React.createElement(StyledToolsContainer, { order: [1, null, 3], flexDirection: ["column", null, "row"], justifyContent: "space-between" },
                 React.createElement(Flex$1, { order: [2, null, 1], alignItems: "center" },
                     React.createElement(ThemeSwitcher$1, { isDark: isDark, toggleTheme: toggleTheme }),
                     React.createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang, color: darkColors.textSubtle, dropdownPosition: "top-right" })),
-                React.createElement(Flex$1, { order: [1, null, 2], mb: ["42px", null, "0"], justifyContent: "space-between", alignItems: "center" },
-                    React.createElement(Box, { mr: "36px" },
-                        React.createElement(VXCPrice$3, { vxcPriceUsd: vxcPriceUsd, color: darkColors.textSubtle })),
-                    React.createElement(Box, { mr: "36px" },
-                        React.createElement(VChipPrice$3, { vchipPriceUsd: vchipPriceUsd, color: darkColors.textSubtle })),
-                    React.createElement(Box, { mr: "36px" },
+                React.createElement(Flex$1, { order: [1, null, 2], mb: ["24px", null, "0"], justifyContent: "space-between", alignItems: "center" },
+                    React.createElement(Box, { mr: "20px" },
+                        React.createElement(VXCPrice$3, { vxcPriceUsd: vxcPriceUsd, color: darkColors.textSubtle }),
+                        React.createElement(VChipPrice$3, { vchipPriceUsd: vchipPriceUsd, color: darkColors.textSubtle }),
                         React.createElement(BankPrice$3, { bankPriceUsd: bankPriceUsd, color: darkColors.textSubtle })),
-                    React.createElement(Button, { as: "a", href: "https://localhost:3000/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", scale: "sm", endIcon: React.createElement(Icon$1r, { color: lightColors.backgroundAlt }) }, buyVXCLabel))))));
+                    React.createElement(Button, { as: "a", href: "https://localhost:3000/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", target: "_blank", scale: "sm", endIcon: React.createElement(Icon$1r, { color: lightColors.backgroundAlt }) }, buyVXCLabel))))));
 };
 
 var StyledMenuItemContainer = styled.div(templateObject_1$e || (templateObject_1$e = __makeTemplateObject(["\n  position: relative;\n\n  ", ";\n"], ["\n  position: relative;\n\n  ", ";\n"])), function (_a) {

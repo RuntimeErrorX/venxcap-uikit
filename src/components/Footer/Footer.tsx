@@ -36,7 +36,7 @@ const MenuItem: React.FC<FooterProps> = ({
 }) => {
 const theme = useTheme();
   return (
-    <StyledFooter p={["40px 16px", null, "56px 40px 55px 40px"]} {...props} justifyContent="center">
+    <StyledFooter p={["40px 16px", null, "56px 40px 32px 40px"]} {...props} justifyContent="center">
       <Flex flexDirection="column" width={["100%", null, "1200px;"]}>
         <StyledIconMobileContainer display={["block", null, "none"]}>
           <VenetianXRound isDark width="130px" />
@@ -66,7 +66,7 @@ const theme = useTheme();
             </StyledList>
           ))}
           <Box display={["none", null, "block"]}>
-            <VenetianXRound isDark width="90px" />
+            <VenetianXRound isDark width="160px" />
           </Box>
         </Flex>
         <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />
@@ -85,19 +85,16 @@ const theme = useTheme();
               dropdownPosition="top-right"
             />
           </Flex>
-          <Flex order={[1, null, 2]} mb={["42px", null, "0"]} justifyContent="space-between" alignItems="center">
-            <Box mr="36px">
+          <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
+            <Box mr="20px">
               <VXCPrice vxcPriceUsd={vxcPriceUsd} color={darkColors.textSubtle as keyof Colors} />
-            </Box>
-            <Box mr="36px">
               <VChipPrice vchipPriceUsd={vchipPriceUsd} color={darkColors.textSubtle as keyof Colors} />
-            </Box>
-            <Box mr="36px">
               <BankPrice bankPriceUsd={bankPriceUsd} color={darkColors.textSubtle as keyof Colors} />
             </Box>
             <Button
               as="a"
               href="https://localhost:3000/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
+              target="_blank"
               scale="sm"
               endIcon={<ArrowForwardIcon color={lightColors.backgroundAlt} />}
             >

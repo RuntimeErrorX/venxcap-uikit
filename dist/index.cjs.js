@@ -4182,7 +4182,7 @@ var templateObject_1$f;
 var MenuItem$1 = function (_a) {
     var items = _a.items, isDark = _a.isDark, toggleTheme = _a.toggleTheme, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, vxcPriceUsd = _a.vxcPriceUsd, vchipPriceUsd = _a.vchipPriceUsd, bankPriceUsd = _a.bankPriceUsd, buyVXCLabel = _a.buyVXCLabel, props = __rest(_a, ["items", "isDark", "toggleTheme", "currentLang", "langs", "setLang", "vxcPriceUsd", "vchipPriceUsd", "bankPriceUsd", "buyVXCLabel"]);
     styled.useTheme();
-    return (React__default['default'].createElement(StyledFooter, __assign({ p: ["40px 16px", null, "56px 40px 55px 40px"] }, props, { justifyContent: "center" }),
+    return (React__default['default'].createElement(StyledFooter, __assign({ p: ["40px 16px", null, "56px 40px 32px 40px"] }, props, { justifyContent: "center" }),
         React__default['default'].createElement(Flex$1, { flexDirection: "column", width: ["100%", null, "1200px;"] },
             React__default['default'].createElement(StyledIconMobileContainer, { display: ["block", null, "none"] },
                 React__default['default'].createElement(VenetianXRound$1, { isDark: true, width: "130px" })),
@@ -4198,20 +4198,18 @@ var MenuItem$1 = function (_a) {
                         })));
                 }),
                 React__default['default'].createElement(Box, { display: ["none", null, "block"] },
-                    React__default['default'].createElement(VenetianXRound$1, { isDark: true, width: "90px" }))),
+                    React__default['default'].createElement(VenetianXRound$1, { isDark: true, width: "160px" }))),
             React__default['default'].createElement(StyledSocialLinks, { order: [2], pb: ["42px", null, "32px"], mb: ["0", null, "32px"] }),
             React__default['default'].createElement(StyledToolsContainer, { order: [1, null, 3], flexDirection: ["column", null, "row"], justifyContent: "space-between" },
                 React__default['default'].createElement(Flex$1, { order: [2, null, 1], alignItems: "center" },
                     React__default['default'].createElement(ThemeSwitcher$1, { isDark: isDark, toggleTheme: toggleTheme }),
                     React__default['default'].createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang, color: darkColors.textSubtle, dropdownPosition: "top-right" })),
-                React__default['default'].createElement(Flex$1, { order: [1, null, 2], mb: ["42px", null, "0"], justifyContent: "space-between", alignItems: "center" },
-                    React__default['default'].createElement(Box, { mr: "36px" },
-                        React__default['default'].createElement(VXCPrice$3, { vxcPriceUsd: vxcPriceUsd, color: darkColors.textSubtle })),
-                    React__default['default'].createElement(Box, { mr: "36px" },
-                        React__default['default'].createElement(VChipPrice$3, { vchipPriceUsd: vchipPriceUsd, color: darkColors.textSubtle })),
-                    React__default['default'].createElement(Box, { mr: "36px" },
+                React__default['default'].createElement(Flex$1, { order: [1, null, 2], mb: ["24px", null, "0"], justifyContent: "space-between", alignItems: "center" },
+                    React__default['default'].createElement(Box, { mr: "20px" },
+                        React__default['default'].createElement(VXCPrice$3, { vxcPriceUsd: vxcPriceUsd, color: darkColors.textSubtle }),
+                        React__default['default'].createElement(VChipPrice$3, { vchipPriceUsd: vchipPriceUsd, color: darkColors.textSubtle }),
                         React__default['default'].createElement(BankPrice$3, { bankPriceUsd: bankPriceUsd, color: darkColors.textSubtle })),
-                    React__default['default'].createElement(Button, { as: "a", href: "https://localhost:3000/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", scale: "sm", endIcon: React__default['default'].createElement(Icon$1r, { color: lightColors.backgroundAlt }) }, buyVXCLabel))))));
+                    React__default['default'].createElement(Button, { as: "a", href: "https://localhost:3000/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", target: "_blank", scale: "sm", endIcon: React__default['default'].createElement(Icon$1r, { color: lightColors.backgroundAlt }) }, buyVXCLabel))))));
 };
 
 var StyledMenuItemContainer = styled__default['default'].div(templateObject_1$e || (templateObject_1$e = __makeTemplateObject(["\n  position: relative;\n\n  ", ";\n"], ["\n  position: relative;\n\n  ", ";\n"])), function (_a) {
