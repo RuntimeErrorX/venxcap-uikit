@@ -4168,7 +4168,7 @@ var templateObject_1$f;
 var MenuItem$1 = function (_a) {
     var items = _a.items, isDark = _a.isDark, toggleTheme = _a.toggleTheme, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, vxcPriceUsd = _a.vxcPriceUsd, vchipPriceUsd = _a.vchipPriceUsd, bankPriceUsd = _a.bankPriceUsd, buyVXCLabel = _a.buyVXCLabel, props = __rest(_a, ["items", "isDark", "toggleTheme", "currentLang", "langs", "setLang", "vxcPriceUsd", "vchipPriceUsd", "bankPriceUsd", "buyVXCLabel"]);
     useTheme();
-    return (React.createElement(StyledFooter, __assign({ p: ["40px 16px", null, "56px 40px 32px 40px"] }, props, { justifyContent: "center" }),
+    return (React.createElement(StyledFooter, __assign({ p: ["40px 16px", null, "56px 40px 55px 40px"] }, props, { justifyContent: "center" }),
         React.createElement(Flex$1, { flexDirection: "column", width: ["100%", null, "1200px;"] },
             React.createElement(StyledIconMobileContainer, { display: ["block", null, "none"] },
                 React.createElement(VenetianXRound$1, { isDark: true, width: "130px" })),
