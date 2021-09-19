@@ -6,7 +6,7 @@ import BottomNav from "../../components/BottomNav";
 import throttle from "lodash/throttle";
 import Overlay from "../../components/Overlay/Overlay";
 import { useMatchBreakpoints } from "../../hooks";
-import Logo from "./../Menu/icons/Logo"
+import Logo from "../../widgets/Menu/icons/Logo"
 import { Flex } from "../../components/Flex";
 import Footer from "../../components/Footer";
 import MenuItems from "../../components/MenuItems/MenuItems";
@@ -33,7 +33,7 @@ const Wrapper = styled.div`
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
   transition: top 0.21s;
-  padding-top: ${({ showMenu }) => (showMenu ? `80px` : `80px`)};
+  padding-top: ${({ showMenu }) => (showMenu ? `100px` : `85px`)};
   transition: padding-top 0.2s;
   left: 0;
   display: flex;

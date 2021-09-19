@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useTheme } from "styled-components";
-import { VenetianXRound } from "../Svg";
+import { VChipRound } from "../Svg";
 import Text from "../Text/Text";
 import Skeleton from "../Skeleton/Skeleton";
 import { Colors } from "../../theme";
@@ -32,7 +32,7 @@ const theme = useTheme();
       href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
       target="_blank"
     >
-      <VenetianXRound width="24px" mr="8px" isDark={theme.isDark} />
+      <VChipRound width="24px" mr="8px" isDark={theme.isDark} />
       <Text color={color} bold>{`$${vchipPriceUsd.toFixed(7)}`}</Text> {/* color={color} */}
     </PriceLink>
   ) : (

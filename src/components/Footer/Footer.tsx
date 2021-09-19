@@ -39,7 +39,7 @@ const theme = useTheme();
     <StyledFooter p={["40px 16px", null, "56px 40px 55px 40px"]} {...props} justifyContent="center">
       <Flex flexDirection="column" width={["100%", null, "1200px;"]}>
         <StyledIconMobileContainer display={["block", null, "none"]}>
-          <VenetianXRound isDark width="40px" />
+          <VenetianXRound isDark width="130px" />
         </StyledIconMobileContainer>
         <Flex
           order={[2, null, 1]}
@@ -98,7 +98,6 @@ const theme = useTheme();
             <Button
               as="a"
               href="https://localhost:3000/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
-              target="_blank"
               scale="sm"
               endIcon={<ArrowForwardIcon color={lightColors.backgroundAlt} />}
             >

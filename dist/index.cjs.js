@@ -4101,7 +4101,7 @@ var SocialLinks = function (_a) {
 };
 var SocialLinks$1 = React__default['default'].memo(SocialLinks, function () { return true; });
 
-var StyledFooter = styled__default['default'](Flex$1)(templateObject_1$j || (templateObject_1$j = __makeTemplateObject(["\n  bottom:0;\n  left:0;\n  background: ", ";\n"], ["\n  bottom:0;\n  left:0;\n  background: ", ";\n"])), darkColors.backgroundAlt);
+var StyledFooter = styled__default['default'](Flex$1)(templateObject_1$j || (templateObject_1$j = __makeTemplateObject(["\n  background: ", ";\n"], ["\n  background: ", ";\n"])), darkColors.backgroundAlt);
 var StyledList = styled__default['default'].ul(templateObject_2$6 || (templateObject_2$6 = __makeTemplateObject(["\n  list-style: none;\n  margin-bottom: 40px;\n\n  ", " {\n    margin-bottom: 0px;\n  }\n"], ["\n  list-style: none;\n  margin-bottom: 40px;\n\n  ", " {\n    margin-bottom: 0px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.md;
@@ -4161,7 +4161,7 @@ var VChipPrice$2 = function (_a) {
     var vchipPriceUsd = _a.vchipPriceUsd, _b = _a.color, color = _b === void 0 ? "textSubtle" : _b;
     var theme = styled.useTheme();
     return vchipPriceUsd ? (React__default['default'].createElement(PriceLink$4, { href: "https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", target: "_blank" },
-        React__default['default'].createElement(VenetianXRound$1, { width: "24px", mr: "8px", isDark: theme.isDark }),
+        React__default['default'].createElement(VChipRound, { width: "24px", mr: "8px", isDark: theme.isDark }),
         React__default['default'].createElement(Text, { color: color, bold: true }, "$" + vchipPriceUsd.toFixed(7)),
         " ")) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
 };
@@ -4185,7 +4185,7 @@ var MenuItem$1 = function (_a) {
     return (React__default['default'].createElement(StyledFooter, __assign({ p: ["40px 16px", null, "56px 40px 55px 40px"] }, props, { justifyContent: "center" }),
         React__default['default'].createElement(Flex$1, { flexDirection: "column", width: ["100%", null, "1200px;"] },
             React__default['default'].createElement(StyledIconMobileContainer, { display: ["block", null, "none"] },
-                React__default['default'].createElement(VenetianXRound$1, { isDark: true, width: "40px" })),
+                React__default['default'].createElement(VenetianXRound$1, { isDark: true, width: "130px" })),
             React__default['default'].createElement(Flex$1, { order: [2, null, 1], flexDirection: ["column", null, "row"], justifyContent: "space-between", alignItems: "flex-start", mb: ["42px", null, "36px"] }, items === null || items === void 0 ? void 0 :
                 items.map(function (item) {
                     var _a;
@@ -4211,7 +4211,7 @@ var MenuItem$1 = function (_a) {
                         React__default['default'].createElement(VChipPrice$3, { vchipPriceUsd: vchipPriceUsd, color: darkColors.textSubtle })),
                     React__default['default'].createElement(Box, { mr: "36px" },
                         React__default['default'].createElement(BankPrice$3, { bankPriceUsd: bankPriceUsd, color: darkColors.textSubtle })),
-                    React__default['default'].createElement(Button, { as: "a", href: "https://localhost:3000/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", target: "_blank", scale: "sm", endIcon: React__default['default'].createElement(Icon$1r, { color: lightColors.backgroundAlt }) }, buyVXCLabel))))));
+                    React__default['default'].createElement(Button, { as: "a", href: "https://localhost:3000/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", scale: "sm", endIcon: React__default['default'].createElement(Icon$1r, { color: lightColors.backgroundAlt }) }, buyVXCLabel))))));
 };
 
 var StyledMenuItemContainer = styled__default['default'].div(templateObject_1$e || (templateObject_1$e = __makeTemplateObject(["\n  position: relative;\n\n  ", ";\n"], ["\n  position: relative;\n\n  ", ";\n"])), function (_a) {
@@ -4718,7 +4718,7 @@ var Wrapper = styled__default['default'].div(templateObject_1$6 || (templateObje
 // padding-bottom: ${({ showMenu }) => (showMenu ? `7px` : `3px`)};
 var StyledNav = styled__default['default'].nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  position: fixed;\n  transition: top 0.21s;\n  padding-top: ", ";\n  transition: padding-top 0.2s;\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"], ["\n  position: fixed;\n  transition: top 0.21s;\n  padding-top: ", ";\n  transition: padding-top 0.2s;\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"])), function (_a) {
     var showMenu = _a.showMenu;
-    return (showMenu ? "80px" : "80px");
+    return (showMenu ? "100px" : "85px");
 }, MENU_HEIGHT, function (_a) {
     var theme = _a.theme;
     return theme.nav.background;
