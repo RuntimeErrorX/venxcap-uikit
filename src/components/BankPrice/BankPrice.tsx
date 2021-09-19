@@ -33,7 +33,7 @@ const theme = useTheme();
       target="_blank"
     >
       <VenetianXRound width="24px" mr="8px" isDark={theme.isDark} />
-      <Text color={color} bold>{`$${bankPriceUsd.toFixed(7)}`}</Text> 
+      <Text color={color} bold>{`$${bankPriceUsd.toFixed(9)}`}</Text> 
     </PriceLink>
   ) : (
     <Skeleton width={80} height={24} />

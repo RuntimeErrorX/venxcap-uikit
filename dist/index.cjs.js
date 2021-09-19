@@ -4162,7 +4162,7 @@ var VChipPrice$2 = function (_a) {
     var theme = styled.useTheme();
     return vchipPriceUsd ? (React__default['default'].createElement(PriceLink$4, { href: "https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", target: "_blank" },
         React__default['default'].createElement(VChipRound, { width: "24px", mr: "8px", isDark: theme.isDark }),
-        React__default['default'].createElement(Text, { color: color, bold: true }, "$" + vchipPriceUsd.toFixed(7)),
+        React__default['default'].createElement(Text, { color: color, bold: true }, "$" + vchipPriceUsd.toFixed(9)),
         " ")) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
 };
 var VChipPrice$3 = React__default['default'].memo(VChipPrice$2);
@@ -4174,7 +4174,7 @@ var BankPrice$2 = function (_a) {
     var theme = styled.useTheme();
     return bankPriceUsd ? (React__default['default'].createElement(PriceLink$3, { href: "https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", target: "_blank" },
         React__default['default'].createElement(VenetianXRound$1, { width: "24px", mr: "8px", isDark: theme.isDark }),
-        React__default['default'].createElement(Text, { color: color, bold: true }, "$" + bankPriceUsd.toFixed(7)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
+        React__default['default'].createElement(Text, { color: color, bold: true }, "$" + bankPriceUsd.toFixed(9)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
 };
 var BankPrice$3 = React__default['default'].memo(BankPrice$2);
 var templateObject_1$f;
@@ -4206,8 +4206,10 @@ var MenuItem$1 = function (_a) {
                     React__default['default'].createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang, color: darkColors.textSubtle, dropdownPosition: "top-right" })),
                 React__default['default'].createElement(Flex$1, { order: [1, null, 2], mb: ["24px", null, "0"], justifyContent: "space-between", alignItems: "center" },
                     React__default['default'].createElement(Box, { mr: "20px" },
-                        React__default['default'].createElement(VXCPrice$3, { vxcPriceUsd: vxcPriceUsd, color: darkColors.textSubtle }),
-                        React__default['default'].createElement(VChipPrice$3, { vchipPriceUsd: vchipPriceUsd, color: darkColors.textSubtle }),
+                        React__default['default'].createElement(VXCPrice$3, { vxcPriceUsd: vxcPriceUsd, color: darkColors.textSubtle })),
+                    React__default['default'].createElement(Box, { mr: "20px" },
+                        React__default['default'].createElement(VChipPrice$3, { vchipPriceUsd: vchipPriceUsd, color: darkColors.textSubtle })),
+                    React__default['default'].createElement(Box, { mr: "20px" },
                         React__default['default'].createElement(BankPrice$3, { bankPriceUsd: bankPriceUsd, color: darkColors.textSubtle })),
                     React__default['default'].createElement(Button, { as: "a", href: "https://localhost:3000/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", target: "_blank", scale: "sm", endIcon: React__default['default'].createElement(Icon$1r, { color: lightColors.backgroundAlt }) }, buyVXCLabel))))));
 };

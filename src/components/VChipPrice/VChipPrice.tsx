@@ -33,7 +33,7 @@ const theme = useTheme();
       target="_blank"
     >
       <VChipRound width="24px" mr="8px" isDark={theme.isDark} />
-      <Text color={color} bold>{`$${vchipPriceUsd.toFixed(7)}`}</Text> {/* color={color} */}
+      <Text color={color} bold>{`$${vchipPriceUsd.toFixed(9)}`}</Text> {/* color={color} */}
     </PriceLink>
   ) : (
     <Skeleton width={80} height={24} />

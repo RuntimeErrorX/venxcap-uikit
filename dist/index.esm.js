@@ -4148,7 +4148,7 @@ var VChipPrice$2 = function (_a) {
     var theme = useTheme();
     return vchipPriceUsd ? (React.createElement(PriceLink$4, { href: "https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", target: "_blank" },
         React.createElement(VChipRound, { width: "24px", mr: "8px", isDark: theme.isDark }),
-        React.createElement(Text, { color: color, bold: true }, "$" + vchipPriceUsd.toFixed(7)),
+        React.createElement(Text, { color: color, bold: true }, "$" + vchipPriceUsd.toFixed(9)),
         " ")) : (React.createElement(Skeleton, { width: 80, height: 24 }));
 };
 var VChipPrice$3 = React.memo(VChipPrice$2);
@@ -4160,7 +4160,7 @@ var BankPrice$2 = function (_a) {
     var theme = useTheme();
     return bankPriceUsd ? (React.createElement(PriceLink$3, { href: "https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", target: "_blank" },
         React.createElement(VenetianXRound$1, { width: "24px", mr: "8px", isDark: theme.isDark }),
-        React.createElement(Text, { color: color, bold: true }, "$" + bankPriceUsd.toFixed(7)))) : (React.createElement(Skeleton, { width: 80, height: 24 }));
+        React.createElement(Text, { color: color, bold: true }, "$" + bankPriceUsd.toFixed(9)))) : (React.createElement(Skeleton, { width: 80, height: 24 }));
 };
 var BankPrice$3 = React.memo(BankPrice$2);
 var templateObject_1$f;
@@ -4192,8 +4192,10 @@ var MenuItem$1 = function (_a) {
                     React.createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang, color: darkColors.textSubtle, dropdownPosition: "top-right" })),
                 React.createElement(Flex$1, { order: [1, null, 2], mb: ["24px", null, "0"], justifyContent: "space-between", alignItems: "center" },
                     React.createElement(Box, { mr: "20px" },
-                        React.createElement(VXCPrice$3, { vxcPriceUsd: vxcPriceUsd, color: darkColors.textSubtle }),
-                        React.createElement(VChipPrice$3, { vchipPriceUsd: vchipPriceUsd, color: darkColors.textSubtle }),
+                        React.createElement(VXCPrice$3, { vxcPriceUsd: vxcPriceUsd, color: darkColors.textSubtle })),
+                    React.createElement(Box, { mr: "20px" },
+                        React.createElement(VChipPrice$3, { vchipPriceUsd: vchipPriceUsd, color: darkColors.textSubtle })),
+                    React.createElement(Box, { mr: "20px" },
                         React.createElement(BankPrice$3, { bankPriceUsd: bankPriceUsd, color: darkColors.textSubtle })),
                     React.createElement(Button, { as: "a", href: "https://localhost:3000/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", target: "_blank", scale: "sm", endIcon: React.createElement(Icon$1r, { color: lightColors.backgroundAlt }) }, buyVXCLabel))))));
 };
