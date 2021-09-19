@@ -26,21 +26,21 @@ const Wrapper = styled.div`
 `;
 
 // transition: top 0.2s;-${MENU_HEIGHT}
-  // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
-  // height: ${MENU_HEIGHT}px;
-  // padding-bottom: ${({ showMenu }) => (showMenu ? `7px` : `3px`)};
-
+// border-bottom: solid 2px rgba(133, 133, 133, 0.1);
+// height: ${MENU_HEIGHT}px;
+// padding-bottom: ${({ showMenu }) => (showMenu ? `7px` : `3px`)};
+// ${MENU_HEIGHT}px;
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
   transition: top 0.21s;
-  padding-top: ${({ showMenu }) => (showMenu ? `100px` : `85px`)};
+  padding-top: ${({ showMenu }) => (showMenu ? `62px` : `62px`)};
   transition: padding-top 0.2s;
   left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: ${MENU_HEIGHT}px;
+  height: 0px; 
   background-color: ${({ theme }) => theme.nav.background};
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   z-index: 20;
@@ -134,7 +134,7 @@ const Menu: React.FC<NavProps> = ({
     <Wrapper>
     <StyledNav showMenu={showMenu}>
       <Flex>
-        <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
+        <Logo isDark={isDark} href={homeLink?.href ?? "/"} width='171px' />
         {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
       </Flex>
       <Flex alignItems="center">

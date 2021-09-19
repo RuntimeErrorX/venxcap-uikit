@@ -3598,7 +3598,7 @@ var useTooltip = function (content, options) {
     };
 };
 
-var ModalHeader = styled__default['default'].div(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  align-items: center;\n  background: ", ";\n  border-bottom: 1px solid ", ";\n  display: flex;\n  padding: 12px 24px;\n"], ["\n  align-items: center;\n  background: ", ";\n  border-bottom: 1px solid ", ";\n  display: flex;\n  padding: 12px 24px;\n"])), function (_a) {
+var ModalHeader = styled__default['default'].div(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  align-items: center;\n  background: ", ";\n  border-bottom: 1px solid ", ";\n  display: flex;\n  padding: 6px 24px;\n"], ["\n  align-items: center;\n  background: ", ";\n  border-bottom: 1px solid ", ";\n  display: flex;\n  padding: 6px 24px;\n"])), function (_a) {
     var background = _a.background;
     return background || "transparent";
 }, function (_a) {
@@ -4716,10 +4716,11 @@ var Wrapper = styled__default['default'].div(templateObject_1$6 || (templateObje
 // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
 // height: ${MENU_HEIGHT}px;
 // padding-bottom: ${({ showMenu }) => (showMenu ? `7px` : `3px`)};
-var StyledNav = styled__default['default'].nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  position: fixed;\n  transition: top 0.21s;\n  padding-top: ", ";\n  transition: padding-top 0.2s;\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"], ["\n  position: fixed;\n  transition: top 0.21s;\n  padding-top: ", ";\n  transition: padding-top 0.2s;\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"])), function (_a) {
+// ${MENU_HEIGHT}px;
+var StyledNav = styled__default['default'].nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  position: fixed;\n  transition: top 0.21s;\n  padding-top: ", ";\n  transition: padding-top 0.2s;\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: 0px; \n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"], ["\n  position: fixed;\n  transition: top 0.21s;\n  padding-top: ", ";\n  transition: padding-top 0.2s;\n  left: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: 0px; \n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"])), function (_a) {
     var showMenu = _a.showMenu;
-    return (showMenu ? "100px" : "85px");
-}, MENU_HEIGHT, function (_a) {
+    return (showMenu ? "62px" : "62px");
+}, function (_a) {
     var theme = _a.theme;
     return theme.nav.background;
 }, function (_a) {
@@ -4775,7 +4776,7 @@ var Menu$1 = function (_a) {
     return (React__default['default'].createElement(Wrapper, null,
         React__default['default'].createElement(StyledNav, { showMenu: showMenu },
             React__default['default'].createElement(Flex, null,
-                React__default['default'].createElement(Logo$1, { isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
+                React__default['default'].createElement(Logo$1, { isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/", width: '171px' }),
                 !isMobile && React__default['default'].createElement(MenuItems, { items: links, activeItem: activeItem, activeSubItem: activeSubItem, ml: "24px" })),
             React__default['default'].createElement(Flex, { alignItems: "center" },
                 !isMobile && (React__default['default'].createElement(React__default['default'].Fragment, null,
