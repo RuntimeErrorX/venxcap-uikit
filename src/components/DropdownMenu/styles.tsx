@@ -39,13 +39,11 @@ export const DropdownMenuItem = styled.button<StyledDropdownMenuItemProps & { $i
     transform: translateY(1px);
   }
 `;
-
+  // &:first-child > ${DropdownMenuItem} {
+  //   border-top-left-radius: 8px;
+  //   border-top-right-radius: 8px;
+  // }
 export const StyledDropdownMenuItemContainer = styled.div`
-  &:first-child > ${DropdownMenuItem} {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-
   &:last-child > ${DropdownMenuItem} {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -62,7 +60,7 @@ export const DropdownMenuDivider = styled.hr`
 export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: boolean }>`
   background-color: ${({ theme }) => theme.card.background};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
-  border-radius: 16px;
+  border-radius: 0px 0px 16px 16px;
   padding-bottom: 4px;
   padding-top: 4px;
   pointer-events: auto;
