@@ -4795,7 +4795,7 @@ var Menu$1 = function (_a) {
             React__default['default'].createElement(Inner, { isPushed: false, showMenu: showMenu },
                 children,
                 React__default['default'].createElement(MenuItem$1, { items: footerLinks, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, vxcPriceUsd: vxcPriceUsd, vchipPriceUsd: vchipPriceUsd, bankPriceUsd: bankPriceUsd, buyVXCLabel: buyVXCLabel, mb: [MOBILE_MENU_HEIGHT + "px", null, "0px"] }))),
-        isMobile && React__default['default'].createElement(BottomNav, { items: links, activeItem: activeItem, activeSubItem: activeSubItem })));
+        React__default['default'].createElement(BottomNav, { items: links, activeItem: activeItem, activeSubItem: activeSubItem })));
 };
 var templateObject_1$6, templateObject_2$3, templateObject_3$1, templateObject_4, templateObject_5;
 
