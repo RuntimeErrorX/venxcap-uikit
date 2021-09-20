@@ -9,8 +9,8 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({
   label,
   iconName,
   href,
-  showItemsOnMobile = false,
-  isActive = false,
+  showItemsOnMobile = true,
+  isActive = true,
   ...props
 }) => {
   const bottomNavItemContent = (
@@ -28,7 +28,7 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({
       <StyledBottomNavText
         color={isActive ? "text" : "textSubtle"}
         fontWeight={isActive ? "600" : "400"}
-        fontSize="10px"
+        fontSize="14px"
       >
         {label}
       </StyledBottomNavText>

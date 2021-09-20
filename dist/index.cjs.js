@@ -3781,10 +3781,10 @@ var StyledBottomNavText = styled__default['default'](Text)(templateObject_2$8 ||
 var templateObject_1$n, templateObject_2$8;
 
 var BottomNavItem = function (_a) {
-    var label = _a.label, iconName = _a.iconName, href = _a.href, _b = _a.showItemsOnMobile, showItemsOnMobile = _b === void 0 ? false : _b, _c = _a.isActive, isActive = _c === void 0 ? false : _c, props = __rest(_a, ["label", "iconName", "href", "showItemsOnMobile", "isActive"]);
+    var label = _a.label, iconName = _a.iconName, href = _a.href, _b = _a.showItemsOnMobile, showItemsOnMobile = _b === void 0 ? true : _b, _c = _a.isActive, isActive = _c === void 0 ? true : _c, props = __rest(_a, ["label", "iconName", "href", "showItemsOnMobile", "isActive"]);
     var bottomNavItemContent = (React__default['default'].createElement(Flex$1, { flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%" },
         iconName && (React__default['default'].createElement(AnimatedIconComponent, { iconName: iconName, height: "22px", width: "21px", color: isActive ? "secondary" : "textSubtle", isActive: isActive, activeBackgroundColor: "backgroundAlt" })),
-        React__default['default'].createElement(StyledBottomNavText, { color: isActive ? "text" : "textSubtle", fontWeight: isActive ? "600" : "400", fontSize: "10px" }, label)));
+        React__default['default'].createElement(StyledBottomNavText, { color: isActive ? "text" : "textSubtle", fontWeight: isActive ? "600" : "400", fontSize: "14px" }, label)));
     return showItemsOnMobile ? (React__default['default'].createElement(StyledBottomNavItem$1, __assign({ type: "button" }, props), bottomNavItemContent)) : (React__default['default'].createElement(StyledBottomNavItem$1, __assign({ as: reactRouterDom.Link, to: href }, props), bottomNavItemContent));
 };
 
