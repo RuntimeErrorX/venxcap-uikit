@@ -36,7 +36,7 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({
   );
 
   return showItemsOnMobile ? (
-    <StyledBottomNavItem type="button" {...props}>
+    <StyledBottomNavItem as={Link} to={href} {...props}>
       {bottomNavItemContent}
     </StyledBottomNavItem>
   ) : (
